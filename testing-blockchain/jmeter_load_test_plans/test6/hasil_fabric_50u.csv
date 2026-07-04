@@ -1,0 +1,502 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1779379148634,269,POST Login,200,OK,Setup - Get Token 1-1,text,true,,703,229,1,1,http://139.59.240.82:3000/api/auth/login,265,0,65
+1779379151322,449,POST Record Academic Data,201,Created,FABRIC 50 Users 1-9,text,true,,705,693,12,12,http://139.59.240.82:3000/api/academic/record,449,0,27
+1779379151523,279,POST Record Academic Data,201,Created,FABRIC 50 Users 1-10,text,true,,706,695,12,12,http://139.59.240.82:3000/api/academic/record,279,0,28
+1779379149923,1879,POST Record Academic Data,201,Created,FABRIC 50 Users 1-2,text,true,,706,693,12,12,http://139.59.240.82:3000/api/academic/record,1879,0,27
+1779379151122,680,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,705,693,12,12,http://139.59.240.82:3000/api/academic/record,680,0,32
+1779379150521,1299,POST Record Academic Data,201,Created,FABRIC 50 Users 1-5,text,true,,706,693,12,12,http://139.59.240.82:3000/api/academic/record,1299,0,28
+1779379150922,899,POST Record Academic Data,201,Created,FABRIC 50 Users 1-7,text,true,,705,693,12,12,http://139.59.240.82:3000/api/academic/record,899,0,29
+1779379149722,2100,POST Record Academic Data,201,Created,FABRIC 50 Users 1-1,text,true,,706,693,12,12,http://139.59.240.82:3000/api/academic/record,2100,0,29
+1779379150122,1704,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,706,693,12,12,http://139.59.240.82:3000/api/academic/record,1704,0,27
+1779379150720,1112,POST Record Academic Data,201,Created,FABRIC 50 Users 1-6,text,true,,705,693,12,12,http://139.59.240.82:3000/api/academic/record,1112,0,28
+1779379150322,1521,POST Record Academic Data,201,Created,FABRIC 50 Users 1-4,text,true,,706,693,12,12,http://139.59.240.82:3000/api/academic/record,1521,0,30
+1779379151720,689,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,706,695,15,15,http://139.59.240.82:3000/api/academic/record,689,0,28
+1779379151972,444,POST Record Academic Data,201,Created,FABRIC 50 Users 1-9,text,true,,705,693,15,15,http://139.59.240.82:3000/api/academic/record,444,0,0
+1779379152003,413,POST Record Academic Data,201,Created,FABRIC 50 Users 1-2,text,true,,705,693,15,15,http://139.59.240.82:3000/api/academic/record,413,0,0
+1779379152026,390,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,705,693,15,15,http://139.59.240.82:3000/api/academic/record,390,0,0
+1779379152003,414,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,705,693,15,15,http://139.59.240.82:3000/api/academic/record,414,0,0
+1779379152021,396,POST Record Academic Data,201,Created,FABRIC 50 Users 1-5,text,true,,705,693,15,15,http://139.59.240.82:3000/api/academic/record,396,0,0
+1779379152023,395,POST Record Academic Data,201,Created,FABRIC 50 Users 1-1,text,true,,705,693,15,15,http://139.59.240.82:3000/api/academic/record,395,0,0
+1779379152034,384,POST Record Academic Data,201,Created,FABRIC 50 Users 1-6,text,true,,705,693,15,15,http://139.59.240.82:3000/api/academic/record,384,0,0
+1779379152044,374,POST Record Academic Data,201,Created,FABRIC 50 Users 1-4,text,true,,705,693,15,15,http://139.59.240.82:3000/api/academic/record,374,0,0
+1779379151921,497,POST Record Academic Data,201,Created,FABRIC 50 Users 1-12,text,true,,706,695,15,15,http://139.59.240.82:3000/api/academic/record,497,0,29
+1779379152618,585,POST Record Academic Data,201,Created,FABRIC 50 Users 1-9,text,true,,705,693,19,19,http://139.59.240.82:3000/api/academic/record,585,0,0
+1779379152619,586,POST Record Academic Data,201,Created,FABRIC 50 Users 1-6,text,true,,705,693,19,19,http://139.59.240.82:3000/api/academic/record,586,0,0
+1779379152618,587,POST Record Academic Data,201,Created,FABRIC 50 Users 1-2,text,true,,705,693,19,19,http://139.59.240.82:3000/api/academic/record,587,0,0
+1779379152619,587,POST Record Academic Data,201,Created,FABRIC 50 Users 1-4,text,true,,705,693,19,19,http://139.59.240.82:3000/api/academic/record,587,0,0
+1779379152611,596,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,706,695,19,19,http://139.59.240.82:3000/api/academic/record,596,0,0
+1779379152123,1092,POST Record Academic Data,201,Created,FABRIC 50 Users 1-13,text,true,,706,695,19,19,http://139.59.240.82:3000/api/academic/record,1092,0,28
+1779379152022,1194,POST Record Academic Data,201,Created,FABRIC 50 Users 1-7,text,true,,705,693,19,19,http://139.59.240.82:3000/api/academic/record,1194,0,0
+1779379152321,896,POST Record Academic Data,201,Created,FABRIC 50 Users 1-14,text,true,,706,695,19,19,http://139.59.240.82:3000/api/academic/record,896,0,28
+1779379152003,1214,POST Record Academic Data,201,Created,FABRIC 50 Users 1-10,text,true,,706,695,19,19,http://139.59.240.82:3000/api/academic/record,1214,0,0
+1779379152521,703,POST Record Academic Data,201,Created,FABRIC 50 Users 1-15,text,true,,706,695,19,19,http://139.59.240.82:3000/api/academic/record,703,0,31
+1779379152619,1403,POST Record Academic Data,201,Created,FABRIC 50 Users 1-1,text,true,,706,693,23,23,http://139.59.240.82:3000/api/academic/record,1403,0,0
+1779379153404,618,POST Record Academic Data,201,Created,FABRIC 50 Users 1-9,text,true,,705,693,23,23,http://139.59.240.82:3000/api/academic/record,618,0,0
+1779379152619,1405,POST Record Academic Data,201,Created,FABRIC 50 Users 1-5,text,true,,706,693,23,23,http://139.59.240.82:3000/api/academic/record,1405,0,0
+1779379152619,1470,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,706,693,23,23,http://139.59.240.82:3000/api/academic/record,1470,0,0
+1779379152618,1471,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,706,693,23,23,http://139.59.240.82:3000/api/academic/record,1471,0,0
+1779379153322,769,POST Record Academic Data,201,Created,FABRIC 50 Users 1-19,text,true,,706,695,23,23,http://139.59.240.82:3000/api/academic/record,768,0,26
+1779379152920,1178,POST Record Academic Data,201,Created,FABRIC 50 Users 1-17,text,true,,706,695,23,23,http://139.59.240.82:3000/api/academic/record,1178,0,28
+1779379153122,976,POST Record Academic Data,201,Created,FABRIC 50 Users 1-18,text,true,,706,695,23,23,http://139.59.240.82:3000/api/academic/record,976,0,27
+1779379152619,1482,POST Record Academic Data,201,Created,FABRIC 50 Users 1-12,text,true,,707,695,23,23,http://139.59.240.82:3000/api/academic/record,1482,0,0
+1779379152721,1380,POST Record Academic Data,201,Created,FABRIC 50 Users 1-16,text,true,,707,695,23,23,http://139.59.240.82:3000/api/academic/record,1380,0,30
+1779379153407,740,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,706,695,24,24,http://139.59.240.82:3000/api/academic/record,740,0,0
+1779379153418,803,POST Record Academic Data,201,Created,FABRIC 50 Users 1-10,text,true,,706,695,24,24,http://139.59.240.82:3000/api/academic/record,803,0,0
+1779379153417,812,POST Record Academic Data,201,Created,FABRIC 50 Users 1-7,text,true,,705,693,24,24,http://139.59.240.82:3000/api/academic/record,812,0,0
+1779379153406,860,POST Record Academic Data,201,Created,FABRIC 50 Users 1-2,text,true,,705,693,24,24,http://139.59.240.82:3000/api/academic/record,860,0,0
+1779379153418,859,POST Record Academic Data,201,Created,FABRIC 50 Users 1-14,text,true,,706,695,24,24,http://139.59.240.82:3000/api/academic/record,859,0,0
+1779379153406,871,POST Record Academic Data,201,Created,FABRIC 50 Users 1-6,text,true,,705,693,24,24,http://139.59.240.82:3000/api/academic/record,871,0,0
+1779379153426,852,POST Record Academic Data,201,Created,FABRIC 50 Users 1-15,text,true,,706,695,24,24,http://139.59.240.82:3000/api/academic/record,852,0,0
+1779379153416,864,POST Record Academic Data,201,Created,FABRIC 50 Users 1-13,text,true,,706,695,24,24,http://139.59.240.82:3000/api/academic/record,864,0,0
+1779379153407,874,POST Record Academic Data,201,Created,FABRIC 50 Users 1-4,text,true,,705,693,24,24,http://139.59.240.82:3000/api/academic/record,874,0,0
+1779379153520,764,POST Record Academic Data,201,Created,FABRIC 50 Users 1-20,text,true,,706,695,24,24,http://139.59.240.82:3000/api/academic/record,764,0,32
+1779379154468,663,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-2,text,false,Response tidak success,711,693,29,29,http://139.59.240.82:3000/api/academic/record,662,0,0
+1779379154423,710,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-10,text,false,Response tidak success,712,695,29,29,http://139.59.240.82:3000/api/academic/record,710,0,0
+1779379154482,651,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-13,text,false,Response tidak success,712,695,29,29,http://139.59.240.82:3000/api/academic/record,651,0,0
+1779379154292,861,POST Record Academic Data,201,Created,FABRIC 50 Users 1-19,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,861,0,0
+1779379154302,876,POST Record Academic Data,201,Created,FABRIC 50 Users 1-12,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,876,0,0
+1779379153921,1258,POST Record Academic Data,201,Created,FABRIC 50 Users 1-22,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,1258,0,29
+1779379154121,1059,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,1059,0,30
+1779379154227,953,POST Record Academic Data,201,Created,FABRIC 50 Users 1-5,text,true,,705,693,29,29,http://139.59.240.82:3000/api/academic/record,953,0,0
+1779379154291,890,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,705,693,29,29,http://139.59.240.82:3000/api/academic/record,890,0,0
+1779379154322,860,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-24,text,false,Response tidak success,712,695,29,29,http://139.59.240.82:3000/api/academic/record,860,0,29
+1779379154479,703,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-15,text,false,Response tidak success,712,695,29,29,http://139.59.240.82:3000/api/academic/record,703,0,0
+1779379153721,1462,POST Record Academic Data,201,Created,FABRIC 50 Users 1-21,text,true,,707,695,29,29,http://139.59.240.82:3000/api/academic/record,1462,0,31
+1779379154291,893,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,705,693,29,29,http://139.59.240.82:3000/api/academic/record,893,0,0
+1779379154486,699,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-20,text,false,Response tidak success,712,695,29,29,http://139.59.240.82:3000/api/academic/record,699,0,0
+1779379154479,707,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-14,text,false,Response tidak success,712,695,29,29,http://139.59.240.82:3000/api/academic/record,707,0,0
+1779379154483,704,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-4,text,false,Response tidak success,711,693,29,29,http://139.59.240.82:3000/api/academic/record,704,0,0
+1779379154431,762,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-7,text,false,Response tidak success,711,693,29,29,http://139.59.240.82:3000/api/academic/record,762,0,0
+1779379154224,972,POST Record Academic Data,201,Created,FABRIC 50 Users 1-9,text,true,,705,693,29,29,http://139.59.240.82:3000/api/academic/record,972,0,0
+1779379154225,973,POST Record Academic Data,201,Created,FABRIC 50 Users 1-1,text,true,,705,693,29,29,http://139.59.240.82:3000/api/academic/record,973,0,0
+1779379154479,743,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-6,text,false,Response tidak success,711,693,29,29,http://139.59.240.82:3000/api/academic/record,743,0,0
+1779379154302,1544,POST Record Academic Data,201,Created,FABRIC 50 Users 1-16,text,true,,707,695,32,32,http://139.59.240.82:3000/api/academic/record,1544,0,0
+1779379154301,1552,POST Record Academic Data,201,Created,FABRIC 50 Users 1-18,text,true,,707,695,32,32,http://139.59.240.82:3000/api/academic/record,1552,0,0
+1779379154350,1507,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,707,695,32,32,http://139.59.240.82:3000/api/academic/record,1507,0,0
+1779379154520,1337,POST Record Academic Data,201,Created,FABRIC 50 Users 1-25,text,true,,706,695,32,32,http://139.59.240.82:3000/api/academic/record,1337,0,28
+1779379154732,1127,POST Record Academic Data,201,Created,FABRIC 50 Users 1-26,text,true,,706,695,32,32,http://139.59.240.82:3000/api/academic/record,1127,0,30
+1779379154921,947,POST Record Academic Data,201,Created,FABRIC 50 Users 1-27,text,true,,706,695,32,32,http://139.59.240.82:3000/api/academic/record,947,0,53
+1779379154301,1588,POST Record Academic Data,201,Created,FABRIC 50 Users 1-17,text,true,,707,695,32,32,http://139.59.240.82:3000/api/academic/record,1588,0,0
+1779379155332,557,POST Record Academic Data,201,Created,FABRIC 50 Users 1-2,text,true,,705,693,32,32,http://139.59.240.82:3000/api/academic/record,557,0,0
+1779379155135,763,POST Record Academic Data,201,Created,FABRIC 50 Users 1-28,text,true,,706,695,32,32,http://139.59.240.82:3000/api/academic/record,763,0,28
+1779379155335,565,POST Record Academic Data,201,Created,FABRIC 50 Users 1-13,text,true,,706,695,32,32,http://139.59.240.82:3000/api/academic/record,565,0,0
+1779379155384,664,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-15,text,false,Response tidak success,712,695,33,33,http://139.59.240.82:3000/api/academic/record,664,0,0
+1779379155385,675,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-20,text,false,Response tidak success,712,695,33,33,http://139.59.240.82:3000/api/academic/record,675,0,0
+1779379155381,680,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-5,text,false,Response tidak success,711,693,33,33,http://139.59.240.82:3000/api/academic/record,680,0,0
+1779379155399,670,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-1,text,false,Response tidak success,711,693,33,33,http://139.59.240.82:3000/api/academic/record,670,0,0
+1779379155395,678,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-7,text,false,Response tidak success,711,693,33,33,http://139.59.240.82:3000/api/academic/record,678,0,0
+1779379155397,716,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-9,text,false,Response tidak success,711,693,33,33,http://139.59.240.82:3000/api/academic/record,716,0,0
+1779379155385,728,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-21,text,false,Response tidak success,712,695,33,33,http://139.59.240.82:3000/api/academic/record,728,0,0
+1779379155387,728,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-4,text,false,Response tidak success,711,693,33,33,http://139.59.240.82:3000/api/academic/record,728,0,0
+1779379155423,693,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-6,text,false,Response tidak success,711,693,33,33,http://139.59.240.82:3000/api/academic/record,693,0,0
+1779379155520,1108,POST Record Academic Data,201,Created,FABRIC 50 Users 1-30,text,true,,706,695,36,36,http://139.59.240.82:3000/api/academic/record,1108,0,30
+1779379155354,1382,POST Record Academic Data,201,Created,FABRIC 50 Users 1-19,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,1382,0,0
+1779379155322,1415,POST Record Academic Data,201,Created,FABRIC 50 Users 1-29,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,1415,0,27
+1779379155383,1354,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,705,693,37,37,http://139.59.240.82:3000/api/academic/record,1354,0,0
+1779379155381,1356,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,1356,0,0
+1779379155379,1358,POST Record Academic Data,201,Created,FABRIC 50 Users 1-12,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,1358,0,0
+1779379155380,1359,POST Record Academic Data,201,Created,FABRIC 50 Users 1-22,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,1359,0,0
+1779379155385,1354,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,705,693,37,37,http://139.59.240.82:3000/api/academic/record,1354,0,0
+1779379155384,1356,POST Record Academic Data,201,Created,FABRIC 50 Users 1-24,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,1356,0,0
+1779379155336,1405,POST Record Academic Data,201,Created,FABRIC 50 Users 1-10,text,true,,707,695,37,37,http://139.59.240.82:3000/api/academic/record,1405,0,0
+1779379156090,747,POST Record Academic Data,201,Created,FABRIC 50 Users 1-2,text,true,,705,693,37,37,http://139.59.240.82:3000/api/academic/record,747,0,0
+1779379156061,776,POST Record Academic Data,201,Created,FABRIC 50 Users 1-26,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,776,0,0
+1779379156059,779,POST Record Academic Data,201,Created,FABRIC 50 Users 1-25,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,779,0,0
+1779379156100,742,POST Record Academic Data,201,Created,FABRIC 50 Users 1-13,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,742,0,0
+1779379156053,796,POST Record Academic Data,201,Created,FABRIC 50 Users 1-18,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,796,0,0
+1779379155723,1126,POST Record Academic Data,201,Created,FABRIC 50 Users 1-31,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,1126,0,28
+1779379156047,802,POST Record Academic Data,201,Created,FABRIC 50 Users 1-16,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,802,0,0
+1779379155387,1463,POST Record Academic Data,201,Created,FABRIC 50 Users 1-14,text,true,,707,695,37,37,http://139.59.240.82:3000/api/academic/record,1463,0,0
+1779379156069,784,POST Record Academic Data,201,Created,FABRIC 50 Users 1-27,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,784,0,0
+1779379155921,932,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,932,0,35
+1779379156317,629,POST Record Academic Data,201,Created,FABRIC 50 Users 1-6,text,true,,705,693,38,38,http://139.59.240.82:3000/api/academic/record,629,0,0
+1779379156121,842,POST Record Academic Data,201,Created,FABRIC 50 Users 1-33,text,true,,706,695,38,38,http://139.59.240.82:3000/api/academic/record,842,0,27
+1779379156249,715,POST Record Academic Data,201,Created,FABRIC 50 Users 1-15,text,true,,706,695,38,38,http://139.59.240.82:3000/api/academic/record,715,0,0
+1779379156270,695,POST Record Academic Data,201,Created,FABRIC 50 Users 1-1,text,true,,705,693,38,38,http://139.59.240.82:3000/api/academic/record,694,0,0
+1779379156274,692,POST Record Academic Data,201,Created,FABRIC 50 Users 1-7,text,true,,705,693,38,38,http://139.59.240.82:3000/api/academic/record,692,0,0
+1779379156090,877,POST Record Academic Data,201,Created,FABRIC 50 Users 1-17,text,true,,706,695,38,38,http://139.59.240.82:3000/api/academic/record,877,0,0
+1779379156099,883,POST Record Academic Data,201,Created,FABRIC 50 Users 1-28,text,true,,706,695,38,38,http://139.59.240.82:3000/api/academic/record,883,0,0
+1779379156262,722,POST Record Academic Data,201,Created,FABRIC 50 Users 1-5,text,true,,705,693,38,38,http://139.59.240.82:3000/api/academic/record,722,0,0
+1779379156262,762,POST Record Academic Data,201,Created,FABRIC 50 Users 1-20,text,true,,706,695,38,38,http://139.59.240.82:3000/api/academic/record,762,0,0
+1779379156059,965,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,706,695,38,38,http://139.59.240.82:3000/api/academic/record,965,0,0
+1779379156316,1189,POST Record Academic Data,201,Created,FABRIC 50 Users 1-4,text,true,,705,693,40,40,http://139.59.240.82:3000/api/academic/record,1189,0,0
+1779379156937,568,POST Record Academic Data,201,Created,FABRIC 50 Users 1-19,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,568,0,0
+1779379156939,567,POST Record Academic Data,201,Created,FABRIC 50 Users 1-12,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,567,0,0
+1779379156321,1191,POST Record Academic Data,201,Created,FABRIC 50 Users 1-34,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,1191,0,49
+1779379156521,995,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,995,0,28
+1779379156314,1205,POST Record Academic Data,201,Created,FABRIC 50 Users 1-9,text,true,,705,693,40,40,http://139.59.240.82:3000/api/academic/record,1205,0,0
+1779379156730,790,POST Record Academic Data,201,Created,FABRIC 50 Users 1-36,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,790,0,27
+1779379156939,588,POST Record Academic Data,201,Created,FABRIC 50 Users 1-29,text,true,,706,695,41,41,http://139.59.240.82:3000/api/academic/record,588,0,0
+1779379156314,1216,POST Record Academic Data,201,Created,FABRIC 50 Users 1-21,text,true,,706,695,41,41,http://139.59.240.82:3000/api/academic/record,1215,0,0
+1779379156830,702,POST Record Academic Data,201,Created,FABRIC 50 Users 1-30,text,true,,706,695,41,41,http://139.59.240.82:3000/api/academic/record,701,0,0
+1779379156939,927,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,706,695,42,42,http://139.59.240.82:3000/api/academic/record,927,0,0
+1779379156939,928,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,705,693,42,42,http://139.59.240.82:3000/api/academic/record,928,0,0
+1779379156942,928,POST Record Academic Data,201,Created,FABRIC 50 Users 1-24,text,true,,706,695,42,42,http://139.59.240.82:3000/api/academic/record,928,0,0
+1779379156941,929,POST Record Academic Data,201,Created,FABRIC 50 Users 1-22,text,true,,706,695,42,42,http://139.59.240.82:3000/api/academic/record,929,0,0
+1779379157039,831,POST Record Academic Data,201,Created,FABRIC 50 Users 1-25,text,true,,706,695,42,42,http://139.59.240.82:3000/api/academic/record,831,0,0
+1779379157038,833,POST Record Academic Data,201,Created,FABRIC 50 Users 1-2,text,true,,705,693,42,42,http://139.59.240.82:3000/api/academic/record,833,0,0
+1779379157044,830,POST Record Academic Data,201,Created,FABRIC 50 Users 1-13,text,true,,706,695,42,42,http://139.59.240.82:3000/api/academic/record,830,0,0
+1779379156921,954,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,706,695,42,42,http://139.59.240.82:3000/api/academic/record,954,0,31
+1779379156942,934,POST Record Academic Data,201,Created,FABRIC 50 Users 1-10,text,true,,706,695,42,42,http://139.59.240.82:3000/api/academic/record,934,0,0
+1779379156941,936,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,705,693,42,42,http://139.59.240.82:3000/api/academic/record,936,0,0
+1779379157050,912,POST Record Academic Data,201,Created,FABRIC 50 Users 1-16,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,912,0,0
+1779379157038,926,POST Record Academic Data,201,Created,FABRIC 50 Users 1-26,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,926,0,0
+1779379157050,914,POST Record Academic Data,201,Created,FABRIC 50 Users 1-14,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,914,0,0
+1779379157054,910,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,910,0,0
+1779379157049,915,POST Record Academic Data,201,Created,FABRIC 50 Users 1-31,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,915,0,0
+1779379157054,924,POST Record Academic Data,201,Created,FABRIC 50 Users 1-27,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,924,0,0
+1779379157165,837,POST Record Academic Data,201,Created,FABRIC 50 Users 1-33,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,837,0,0
+1779379157049,953,POST Record Academic Data,201,Created,FABRIC 50 Users 1-18,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,953,0,0
+1779379157184,821,POST Record Academic Data,201,Created,FABRIC 50 Users 1-28,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,821,0,0
+1779379157166,840,POST Record Academic Data,201,Created,FABRIC 50 Users 1-7,text,true,,705,693,43,43,http://139.59.240.82:3000/api/academic/record,840,0,0
+1779379157147,875,POST Record Academic Data,201,Created,FABRIC 50 Users 1-6,text,true,,705,693,43,43,http://139.59.240.82:3000/api/academic/record,875,0,0
+1779379157169,853,POST Record Academic Data,201,Created,FABRIC 50 Users 1-17,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,853,0,0
+1779379157322,701,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,701,0,29
+1779379157121,902,POST Record Academic Data,201,Created,FABRIC 50 Users 1-38,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,902,0,27
+1779379157166,866,POST Record Academic Data,201,Created,FABRIC 50 Users 1-15,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,866,0,0
+1779379157224,808,POST Record Academic Data,201,Created,FABRIC 50 Users 1-20,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,808,0,0
+1779379157186,847,POST Record Academic Data,201,Created,FABRIC 50 Users 1-5,text,true,,705,693,43,43,http://139.59.240.82:3000/api/academic/record,847,0,0
+1779379157225,808,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,808,0,0
+1779379157522,512,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,512,0,27
+1779379157166,868,POST Record Academic Data,201,Created,FABRIC 50 Users 1-1,text,true,,705,693,43,43,http://139.59.240.82:3000/api/academic/record,868,0,0
+1779379157708,652,POST Record Academic Data,201,Created,FABRIC 50 Users 1-19,text,true,,706,695,45,45,http://139.59.240.82:3000/api/academic/record,652,0,0
+1779379157732,715,POST Record Academic Data,201,Created,FABRIC 50 Users 1-29,text,true,,706,695,45,45,http://139.59.240.82:3000/api/academic/record,715,0,0
+1779379157732,716,POST Record Academic Data,201,Created,FABRIC 50 Users 1-30,text,true,,706,695,45,45,http://139.59.240.82:3000/api/academic/record,716,0,0
+1779379157708,741,POST Record Academic Data,201,Created,FABRIC 50 Users 1-12,text,true,,706,695,45,45,http://139.59.240.82:3000/api/academic/record,741,0,0
+1779379157714,735,POST Record Academic Data,201,Created,FABRIC 50 Users 1-34,text,true,,706,695,45,45,http://139.59.240.82:3000/api/academic/record,735,0,0
+1779379157732,719,POST Record Academic Data,201,Created,FABRIC 50 Users 1-21,text,true,,706,695,45,45,http://139.59.240.82:3000/api/academic/record,719,0,0
+1779379157720,766,POST Record Academic Data,201,Created,FABRIC 50 Users 1-9,text,true,,705,693,45,45,http://139.59.240.82:3000/api/academic/record,766,0,0
+1779379157732,755,POST Record Academic Data,201,Created,FABRIC 50 Users 1-41,text,true,,706,695,45,45,http://139.59.240.82:3000/api/academic/record,755,0,52
+1779379157708,781,POST Record Academic Data,201,Created,FABRIC 50 Users 1-4,text,true,,705,693,45,45,http://139.59.240.82:3000/api/academic/record,781,0,0
+1779379157720,866,POST Record Academic Data,201,Created,FABRIC 50 Users 1-36,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,866,0,0
+1779379158165,969,POST Record Academic Data,201,Created,FABRIC 50 Users 1-14,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,969,0,0
+1779379158071,1066,POST Record Academic Data,201,Created,FABRIC 50 Users 1-22,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1066,0,0
+1779379157718,1483,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1483,0,0
+1779379157921,1285,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1285,0,35
+1779379158077,1130,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,705,693,49,49,http://139.59.240.82:3000/api/academic/record,1130,0,0
+1779379158071,1138,POST Record Academic Data,201,Created,FABRIC 50 Users 1-24,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1138,0,0
+1779379158068,1144,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,705,693,49,49,http://139.59.240.82:3000/api/academic/record,1144,0,0
+1779379158076,1138,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1138,0,0
+1779379158077,1139,POST Record Academic Data,201,Created,FABRIC 50 Users 1-10,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1139,0,0
+1779379158067,1150,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1150,0,0
+1779379158647,570,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-29,text,false,Response tidak success,712,695,49,49,http://139.59.240.82:3000/api/academic/record,570,0,0
+1779379158648,571,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-30,text,false,Response tidak success,712,695,49,49,http://139.59.240.82:3000/api/academic/record,571,0,0
+1779379158072,1188,POST Record Academic Data,201,Created,FABRIC 50 Users 1-25,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1188,0,0
+1779379158166,1095,POST Record Academic Data,201,Created,FABRIC 50 Users 1-31,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1095,0,0
+1779379158233,1049,POST Record Academic Data,201,Created,FABRIC 50 Users 1-20,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1049,0,0
+1779379158072,1210,POST Record Academic Data,201,Created,FABRIC 50 Users 1-2,text,true,,705,693,49,49,http://139.59.240.82:3000/api/academic/record,1210,0,0
+1779379158204,1080,POST Record Academic Data,201,Created,FABRIC 50 Users 1-33,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1080,0,0
+1779379158165,1119,POST Record Academic Data,201,Created,FABRIC 50 Users 1-26,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1119,0,0
+1779379158075,1216,POST Record Academic Data,201,Created,FABRIC 50 Users 1-13,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1216,0,0
+1779379158234,1061,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1061,0,0
+1779379158233,1062,POST Record Academic Data,201,Created,FABRIC 50 Users 1-15,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1062,0,0
+1779379158235,1061,POST Record Academic Data,201,Created,FABRIC 50 Users 1-1,text,true,,705,693,49,49,http://139.59.240.82:3000/api/academic/record,1061,0,0
+1779379158166,1141,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1141,0,0
+1779379158207,1100,POST Record Academic Data,201,Created,FABRIC 50 Users 1-28,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1100,0,0
+1779379158204,1111,POST Record Academic Data,201,Created,FABRIC 50 Users 1-18,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1111,0,0
+1779379158224,1095,POST Record Academic Data,201,Created,FABRIC 50 Users 1-6,text,true,,705,693,49,49,http://139.59.240.82:3000/api/academic/record,1095,0,0
+1779379158225,1094,POST Record Academic Data,201,Created,FABRIC 50 Users 1-38,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1094,0,0
+1779379158235,1084,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1084,0,0
+1779379158207,1113,POST Record Academic Data,201,Created,FABRIC 50 Users 1-7,text,true,,705,693,49,49,http://139.59.240.82:3000/api/academic/record,1112,0,0
+1779379158224,1096,POST Record Academic Data,201,Created,FABRIC 50 Users 1-17,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1096,0,0
+1779379158179,1148,POST Record Academic Data,201,Created,FABRIC 50 Users 1-27,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,1147,0,0
+1779379158163,1175,POST Record Academic Data,201,Created,FABRIC 50 Users 1-16,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,1175,0,0
+1779379158121,1263,POST Record Academic Data,201,Created,FABRIC 50 Users 1-43,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,1263,0,30
+1779379158561,824,POST Record Academic Data,201,Created,FABRIC 50 Users 1-19,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,824,0,0
+1779379158651,734,POST Record Academic Data,201,Created,FABRIC 50 Users 1-21,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,734,0,0
+1779379158650,738,POST Record Academic Data,201,Created,FABRIC 50 Users 1-12,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,738,0,0
+1779379158687,702,POST Record Academic Data,201,Created,FABRIC 50 Users 1-41,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,702,0,0
+1779379158649,740,POST Record Academic Data,201,Created,FABRIC 50 Users 1-34,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,740,0,0
+1779379158234,1210,POST Record Academic Data,201,Created,FABRIC 50 Users 1-5,text,true,,705,693,50,50,http://139.59.240.82:3000/api/academic/record,1210,0,0
+1779379158521,923,POST Record Academic Data,201,Created,FABRIC 50 Users 1-45,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,923,0,27
+1779379158225,1220,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,706,695,50,50,http://139.59.240.82:3000/api/academic/record,1220,0,0
+1779379158689,755,POST Record Academic Data,201,Created,FABRIC 50 Users 1-4,text,true,,705,693,50,50,http://139.59.240.82:3000/api/academic/record,755,0,0
+1779379158721,1804,POST Record Academic Data,201,Created,FABRIC 50 Users 1-46,text,true,,707,695,50,50,http://139.59.240.82:3000/api/academic/record,1804,0,29
+1779379159460,1066,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-25,text,false,Response tidak success,712,695,50,50,http://139.59.240.82:3000/api/academic/record,1066,0,0
+1779379159483,1043,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-26,text,false,Response tidak success,712,695,50,50,http://139.59.240.82:3000/api/academic/record,1043,0,0
+1779379159461,1067,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-31,text,false,Response tidak success,712,695,50,50,http://139.59.240.82:3000/api/academic/record,1067,0,0
+1779379159496,1034,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-15,text,false,Response tidak success,712,695,50,50,http://139.59.240.82:3000/api/academic/record,1034,0,0
+1779379159481,1049,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-2,text,false,Response tidak success,712,694,50,50,http://139.59.240.82:3000/api/academic/record,1049,0,0
+1779379159481,1050,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-20,text,false,Response tidak success,712,695,49,49,http://139.59.240.82:3000/api/academic/record,1050,0,0
+1779379159334,1245,POST Record Academic Data,201,Created,FABRIC 50 Users 1-14,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1245,0,0
+1779379158788,1791,POST Record Academic Data,201,Created,FABRIC 50 Users 1-36,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1791,0,0
+1779379159412,1207,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,705,693,49,49,http://139.59.240.82:3000/api/academic/record,1207,0,0
+1779379159336,1284,POST Record Academic Data,201,Created,FABRIC 50 Users 1-22,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1284,0,0
+1779379158920,1702,POST Record Academic Data,201,Created,FABRIC 50 Users 1-47,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1702,0,29
+1779379158686,2076,POST Record Academic Data,201,Created,FABRIC 50 Users 1-9,text,true,,706,693,49,49,http://139.59.240.82:3000/api/academic/record,2076,0,0
+1779379159122,1642,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1642,0,28
+1779379158321,2473,POST Record Academic Data,201,Created,FABRIC 50 Users 1-44,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,2473,0,1031
+1779379159410,1384,POST Record Academic Data,201,Created,FABRIC 50 Users 1-24,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1384,0,0
+1779379159418,1430,POST Record Academic Data,201,Created,FABRIC 50 Users 1-29,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1430,0,0
+1779379159406,1443,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1443,0,0
+1779379159419,1430,POST Record Academic Data,201,Created,FABRIC 50 Users 1-30,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1430,0,0
+1779379159401,1454,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1454,0,0
+1779379159416,1468,POST Record Academic Data,201,Created,FABRIC 50 Users 1-10,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1468,0,0
+1779379159407,1497,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,706,693,49,49,http://139.59.240.82:3000/api/academic/record,1497,0,0
+1779379159319,1587,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1587,0,28
+1779379159413,1534,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1534,0,0
+1779379159416,1589,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1589,0,0
+1779379159483,1541,POST Record Academic Data,201,Created,FABRIC 50 Users 1-33,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1541,0,0
+1779379159507,1544,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1544,0,0
+1779379159507,1582,POST Record Academic Data,201,Created,FABRIC 50 Users 1-28,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1582,0,0
+1779379159519,1570,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1570,0,0
+1779379159540,1551,POST Record Academic Data,201,Created,FABRIC 50 Users 1-16,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1551,0,0
+1779379159515,1577,POST Record Academic Data,201,Created,FABRIC 50 Users 1-18,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1577,0,0
+1779379159495,1599,POST Record Academic Data,201,Created,FABRIC 50 Users 1-1,text,true,,706,693,49,49,http://139.59.240.82:3000/api/academic/record,1599,0,0
+1779379159518,1586,POST Record Academic Data,201,Created,FABRIC 50 Users 1-38,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1586,0,0
+1779379159586,1524,POST Record Academic Data,201,Created,FABRIC 50 Users 1-19,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1524,0,0
+1779379159602,1509,POST Record Academic Data,201,Created,FABRIC 50 Users 1-41,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1509,0,0
+1779379159586,1526,POST Record Academic Data,201,Created,FABRIC 50 Users 1-43,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1526,0,0
+1779379159496,1616,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,707,695,49,49,http://139.59.240.82:3000/api/academic/record,1616,0,0
+1779379159647,1465,POST Record Academic Data,201,Created,FABRIC 50 Users 1-45,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1465,0,0
+1779379159519,1593,POST Record Academic Data,201,Created,FABRIC 50 Users 1-7,text,true,,705,693,49,49,http://139.59.240.82:3000/api/academic/record,1593,0,0
+1779379159519,1601,POST Record Academic Data,201,Created,FABRIC 50 Users 1-17,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1601,0,0
+1779379159540,1614,POST Record Academic Data,201,Created,FABRIC 50 Users 1-27,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1614,0,0
+1779379159518,1652,POST Record Academic Data,201,Created,FABRIC 50 Users 1-6,text,true,,707,694,49,49,http://139.59.240.82:3000/api/academic/record,1652,0,0
+1779379159602,1569,POST Record Academic Data,201,Created,FABRIC 50 Users 1-34,text,true,,706,695,49,49,http://139.59.240.82:3000/api/academic/record,1568,0,0
+1779379159602,1570,POST Record Academic Data,201,Created,FABRIC 50 Users 1-21,text,true,,706,695,48,48,http://139.59.240.82:3000/api/academic/record,1570,0,0
+1779379159602,1608,POST Record Academic Data,201,Created,FABRIC 50 Users 1-12,text,true,,706,695,48,48,http://139.59.240.82:3000/api/academic/record,1608,0,0
+1779379159491,1724,POST Record Academic Data,201,Created,FABRIC 50 Users 1-13,text,true,,707,695,48,48,http://139.59.240.82:3000/api/academic/record,1724,0,0
+1779379160731,898,POST Record Academic Data,201,Created,FABRIC 50 Users 1-15,text,true,,706,695,48,48,http://139.59.240.82:3000/api/academic/record,898,0,0
+1779379159647,1982,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,707,695,48,48,http://139.59.240.82:3000/api/academic/record,1982,0,0
+1779379159647,1993,POST Record Academic Data,201,Created,FABRIC 50 Users 1-4,text,true,,707,694,48,48,http://139.59.240.82:3000/api/academic/record,1993,0,0
+1779379160731,923,POST Record Academic Data,201,Created,FABRIC 50 Users 1-25,text,true,,706,695,47,47,http://139.59.240.82:3000/api/academic/record,923,0,0
+1779379160731,923,POST Record Academic Data,201,Created,FABRIC 50 Users 1-26,text,true,,706,695,47,47,http://139.59.240.82:3000/api/academic/record,923,0,0
+1779379160731,924,POST Record Academic Data,201,Created,FABRIC 50 Users 1-31,text,true,,706,695,47,47,http://139.59.240.82:3000/api/academic/record,924,0,0
+1779379159647,2009,POST Record Academic Data,201,Created,FABRIC 50 Users 1-5,text,true,,706,693,47,47,http://139.59.240.82:3000/api/academic/record,2009,0,0
+1779379160824,834,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,705,693,47,47,http://139.59.240.82:3000/api/academic/record,834,0,0
+1779379159524,2134,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,707,695,47,47,http://139.59.240.82:3000/api/academic/record,2134,0,28
+1779379160731,930,POST Record Academic Data,201,Created,FABRIC 50 Users 1-46,text,true,,706,695,47,47,http://139.59.240.82:3000/api/academic/record,930,0,0
+1779379160978,840,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,706,695,47,47,http://139.59.240.82:3000/api/academic/record,840,0,0
+1779379160746,1078,POST Record Academic Data,201,Created,FABRIC 50 Users 1-20,text,true,,706,695,47,47,http://139.59.240.82:3000/api/academic/record,1078,0,0
+1779379160792,1034,POST Record Academic Data,201,Created,FABRIC 50 Users 1-14,text,true,,706,695,47,47,http://139.59.240.82:3000/api/academic/record,1034,0,0
+1779379160962,864,POST Record Academic Data,201,Created,FABRIC 50 Users 1-9,text,true,,706,694,47,47,http://139.59.240.82:3000/api/academic/record,864,0,0
+1779379161009,819,POST Record Academic Data,201,Created,FABRIC 50 Users 1-24,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,819,0,0
+1779379160824,1007,POST Record Academic Data,201,Created,FABRIC 50 Users 1-22,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,1007,0,0
+1779379160792,1046,POST Record Academic Data,201,Created,FABRIC 50 Users 1-36,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,1046,0,0
+1779379161056,785,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,785,0,0
+1779379160824,1019,POST Record Academic Data,201,Created,FABRIC 50 Users 1-47,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,1019,0,0
+1779379161055,793,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,793,0,0
+1779379161299,772,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-18,text,false,Response tidak success,712,695,46,46,http://139.59.240.82:3000/api/academic/record,772,0,0
+1779379161238,906,POST Record Academic Data,201,Created,FABRIC 50 Users 1-33,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,906,0,0
+1779379161055,1089,POST Record Academic Data,201,Created,FABRIC 50 Users 1-29,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,1089,0,0
+1779379161086,1060,POST Record Academic Data,201,Created,FABRIC 50 Users 1-10,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,1060,0,0
+1779379161009,1138,POST Record Academic Data,201,Created,FABRIC 50 Users 1-44,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,1138,0,0
+1779379161207,941,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,940,0,0
+1779379161055,1093,POST Record Academic Data,201,Created,FABRIC 50 Users 1-30,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,1093,0,0
+1779379161115,1034,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,705,693,46,46,http://139.59.240.82:3000/api/academic/record,1034,0,0
+1779379161162,1016,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,1016,0,0
+1779379161253,930,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,706,695,46,46,http://139.59.240.82:3000/api/academic/record,930,0,0
+1779379161314,875,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-41,text,false,Response tidak success,712,695,46,46,http://139.59.240.82:3000/api/academic/record,875,0,0
+1779379161314,880,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-43,text,false,Response tidak success,712,695,46,46,http://139.59.240.82:3000/api/academic/record,880,0,0
+1779379161299,896,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-16,text,false,Response tidak success,712,695,46,46,http://139.59.240.82:3000/api/academic/record,896,0,0
+1779379161329,867,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-17,text,false,Response tidak success,712,695,46,46,http://139.59.240.82:3000/api/academic/record,867,0,0
+1779379161314,884,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-7,text,false,Response tidak success,712,694,46,46,http://139.59.240.82:3000/api/academic/record,884,0,0
+1779379161376,823,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-34,text,false,Response tidak success,712,695,46,46,http://139.59.240.82:3000/api/academic/record,823,0,0
+1779379161376,823,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-21,text,false,Response tidak success,712,695,45,45,http://139.59.240.82:3000/api/academic/record,823,0,0
+1779379161299,900,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-28,text,false,Response tidak success,712,695,45,45,http://139.59.240.82:3000/api/academic/record,900,0,0
+1779379161314,886,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-45,text,false,Response tidak success,712,695,45,45,http://139.59.240.82:3000/api/academic/record,886,0,0
+1779379161423,777,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-13,text,false,Response tidak success,712,695,45,45,http://139.59.240.82:3000/api/academic/record,777,0,0
+1779379161423,777,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-12,text,false,Response tidak success,712,695,45,45,http://139.59.240.82:3000/api/academic/record,777,0,0
+1779379161314,887,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-38,text,false,Response tidak success,712,695,45,45,http://139.59.240.82:3000/api/academic/record,887,0,0
+1779379161360,841,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-27,text,false,Response tidak success,712,695,45,45,http://139.59.240.82:3000/api/academic/record,841,0,0
+1779379161314,887,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-19,text,false,Response tidak success,712,695,45,45,http://139.59.240.82:3000/api/academic/record,887,0,0
+1779379161299,982,POST Record Academic Data,201,Created,FABRIC 50 Users 1-1,text,true,,706,694,45,45,http://139.59.240.82:3000/api/academic/record,982,0,0
+1779379161115,1758,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,707,695,44,44,http://139.59.240.82:3000/api/academic/record,1758,0,0
+1779379161870,1014,POST Record Academic Data,201,Created,FABRIC 50 Users 1-5,text,true,,706,694,44,44,http://139.59.240.82:3000/api/academic/record,1014,0,0
+1779379161855,1119,POST Record Academic Data,201,Created,FABRIC 50 Users 1-25,text,true,,706,695,43,43,http://139.59.240.82:3000/api/academic/record,1119,0,0
+1779379161838,1138,POST Record Academic Data,201,Created,FABRIC 50 Users 1-15,text,true,,707,696,43,43,http://139.59.240.82:3000/api/academic/record,1138,0,0
+1779379161838,1139,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,706,695,42,42,http://139.59.240.82:3000/api/academic/record,1139,0,0
+1779379161870,1108,POST Record Academic Data,201,Created,FABRIC 50 Users 1-3,text,true,,706,694,42,42,http://139.59.240.82:3000/api/academic/record,1108,0,0
+1779379161299,1687,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,707,695,41,41,http://139.59.240.82:3000/api/academic/record,1687,0,0
+1779379161870,1116,POST Record Academic Data,201,Created,FABRIC 50 Users 1-31,text,true,,706,695,41,41,http://139.59.240.82:3000/api/academic/record,1116,0,0
+1779379161314,1672,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,707,695,41,41,http://139.59.240.82:3000/api/academic/record,1672,0,0
+1779379161855,1132,POST Record Academic Data,201,Created,FABRIC 50 Users 1-26,text,true,,706,695,41,41,http://139.59.240.82:3000/api/academic/record,1132,0,0
+1779379162407,647,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-43,text,false,Response tidak success,712,695,41,41,http://139.59.240.82:3000/api/academic/record,647,0,0
+1779379162407,652,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-17,text,false,Response tidak success,712,695,41,41,http://139.59.240.82:3000/api/academic/record,652,0,0
+1779379162407,654,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-13,text,false,Response tidak success,713,696,41,41,http://139.59.240.82:3000/api/academic/record,654,0,0
+1779379162407,656,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-16,text,false,Response tidak success,712,695,40,40,http://139.59.240.82:3000/api/academic/record,656,0,0
+1779379162407,660,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-28,text,false,Response tidak success,712,695,40,40,http://139.59.240.82:3000/api/academic/record,660,0,0
+1779379161870,1200,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,1200,0,0
+1779379162023,1048,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,1048,0,0
+1779379162039,1033,POST Record Academic Data,201,Created,FABRIC 50 Users 1-22,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,1033,0,0
+1779379162054,1018,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,1018,0,0
+1779379162054,1038,POST Record Academic Data,201,Created,FABRIC 50 Users 1-47,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,1038,0,0
+1779379162054,1039,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,1039,0,0
+1779379162039,1055,POST Record Academic Data,201,Created,FABRIC 50 Users 1-24,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,1055,0,0
+1779379161870,1226,POST Record Academic Data,201,Created,FABRIC 50 Users 1-46,text,true,,706,695,40,40,http://139.59.240.82:3000/api/academic/record,1226,0,0
+1779379162407,691,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-12,text,false,Response tidak success,713,696,40,40,http://139.59.240.82:3000/api/academic/record,691,0,0
+1779379162039,1075,POST Record Academic Data,201,Created,FABRIC 50 Users 1-20,text,true,,706,695,39,39,http://139.59.240.82:3000/api/academic/record,1075,0,0
+1779379162039,1076,POST Record Academic Data,201,Created,FABRIC 50 Users 1-36,text,true,,706,695,39,39,http://139.59.240.82:3000/api/academic/record,1076,0,0
+1779379162039,1076,POST Record Academic Data,201,Created,FABRIC 50 Users 1-14,text,true,,706,695,39,39,http://139.59.240.82:3000/api/academic/record,1076,0,0
+1779379162360,756,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,706,695,39,39,http://139.59.240.82:3000/api/academic/record,756,0,0
+1779379162360,756,POST Record Academic Data,201,Created,FABRIC 50 Users 1-44,text,true,,706,695,39,39,http://139.59.240.82:3000/api/academic/record,756,0,0
+1779379162360,757,POST Record Academic Data,201,Created,FABRIC 50 Users 1-10,text,true,,707,696,39,39,http://139.59.240.82:3000/api/academic/record,757,0,0
+1779379162284,834,POST Record Academic Data,201,Created,FABRIC 50 Users 1-18,text,true,,706,695,38,38,http://139.59.240.82:3000/api/academic/record,834,0,0
+1779379162345,773,POST Record Academic Data,201,Created,FABRIC 50 Users 1-33,text,true,,706,695,38,38,http://139.59.240.82:3000/api/academic/record,773,0,0
+1779379162345,774,POST Record Academic Data,201,Created,FABRIC 50 Users 1-29,text,true,,706,695,38,38,http://139.59.240.82:3000/api/academic/record,774,0,0
+1779379162360,760,POST Record Academic Data,201,Created,FABRIC 50 Users 1-8,text,true,,706,694,38,38,http://139.59.240.82:3000/api/academic/record,760,0,0
+1779379162360,762,POST Record Academic Data,201,Created,FABRIC 50 Users 1-30,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,762,0,0
+1779379162392,737,POST Record Academic Data,201,Created,FABRIC 50 Users 1-41,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,737,0,0
+1779379162407,1348,POST Record Academic Data,201,Created,FABRIC 50 Users 1-19,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,1348,0,0
+1779379162407,1348,POST Record Academic Data,201,Created,FABRIC 50 Users 1-21,text,true,,707,695,37,37,http://139.59.240.82:3000/api/academic/record,1348,0,0
+1779379163179,584,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,583,0,0
+1779379162392,1372,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,1371,0,0
+1779379162407,1357,POST Record Academic Data,201,Created,FABRIC 50 Users 1-34,text,true,,707,695,37,37,http://139.59.240.82:3000/api/academic/record,1357,0,0
+1779379162407,1357,POST Record Academic Data,201,Created,FABRIC 50 Users 1-27,text,true,,707,695,37,37,http://139.59.240.82:3000/api/academic/record,1357,0,0
+1779379162407,1359,POST Record Academic Data,201,Created,FABRIC 50 Users 1-38,text,true,,707,695,37,37,http://139.59.240.82:3000/api/academic/record,1359,0,0
+1779379162392,1383,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,707,695,37,37,http://139.59.240.82:3000/api/academic/record,1383,0,0
+1779379162407,1368,POST Record Academic Data,201,Created,FABRIC 50 Users 1-45,text,true,,707,695,37,37,http://139.59.240.82:3000/api/academic/record,1368,0,0
+1779379163086,690,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,706,695,37,37,http://139.59.240.82:3000/api/academic/record,690,0,0
+1779379163284,589,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-22,text,false,Response tidak success,712,695,37,37,http://139.59.240.82:3000/api/academic/record,589,0,0
+1779379163300,599,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-46,text,false,Response tidak success,712,695,37,37,http://139.59.240.82:3000/api/academic/record,599,0,0
+1779379163315,766,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-20,text,false,Response tidak success,713,696,37,37,http://139.59.240.82:3000/api/academic/record,766,0,0
+1779379163330,752,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-29,text,false,Response tidak success,712,695,36,36,http://139.59.240.82:3000/api/academic/record,752,0,0
+1779379163315,767,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-36,text,false,Response tidak success,712,695,36,36,http://139.59.240.82:3000/api/academic/record,767,0,0
+1779379163330,754,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-33,text,false,Response tidak success,712,695,36,36,http://139.59.240.82:3000/api/academic/record,754,0,0
+1779379163330,756,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-18,text,false,Response tidak success,712,695,36,36,http://139.59.240.82:3000/api/academic/record,756,0,0
+1779379163330,758,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-30,text,false,Response tidak success,712,695,36,36,http://139.59.240.82:3000/api/academic/record,758,0,0
+1779379163300,864,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-24,text,false,Response tidak success,712,695,36,36,http://139.59.240.82:3000/api/academic/record,864,0,0
+1779379163300,880,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-47,text,false,Response tidak success,712,695,36,36,http://139.59.240.82:3000/api/academic/record,880,0,0
+1779379163330,854,POST Record Academic Data,202,Accepted,FABRIC 50 Users 1-44,text,false,Response tidak success,712,695,36,36,http://139.59.240.82:3000/api/academic/record,854,0,0
+1779379163177,1021,POST Record Academic Data,201,Created,FABRIC 50 Users 1-25,text,true,,706,695,36,36,http://139.59.240.82:3000/api/academic/record,1021,0,0
+1779379163284,914,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,706,695,36,36,http://139.59.240.82:3000/api/academic/record,914,0,0
+1779379163192,1007,POST Record Academic Data,201,Created,FABRIC 50 Users 1-31,text,true,,706,695,36,36,http://139.59.240.82:3000/api/academic/record,1007,0,0
+1779379163192,1007,POST Record Academic Data,201,Created,FABRIC 50 Users 1-26,text,true,,706,695,36,36,http://139.59.240.82:3000/api/academic/record,1007,0,0
+1779379163255,944,POST Record Academic Data,201,Created,FABRIC 50 Users 1-43,text,true,,706,695,36,36,http://139.59.240.82:3000/api/academic/record,944,0,0
+1779379163192,1008,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,706,695,36,36,http://139.59.240.82:3000/api/academic/record,1008,0,0
+1779379163192,1008,POST Record Academic Data,201,Created,FABRIC 50 Users 1-11,text,true,,707,696,36,36,http://139.59.240.82:3000/api/academic/record,1008,0,0
+1779379163269,932,POST Record Academic Data,201,Created,FABRIC 50 Users 1-28,text,true,,706,695,35,35,http://139.59.240.82:3000/api/academic/record,932,0,0
+1779379163269,933,POST Record Academic Data,201,Created,FABRIC 50 Users 1-17,text,true,,706,695,35,35,http://139.59.240.82:3000/api/academic/record,933,0,0
+1779379163269,947,POST Record Academic Data,201,Created,FABRIC 50 Users 1-16,text,true,,706,695,35,35,http://139.59.240.82:3000/api/academic/record,947,0,0
+1779379163981,466,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,706,695,35,35,http://139.59.240.82:3000/api/academic/record,466,0,0
+1779379163316,1150,POST Record Academic Data,201,Created,FABRIC 50 Users 1-14,text,true,,707,696,35,35,http://139.59.240.82:3000/api/academic/record,1150,0,0
+1779379163284,1189,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,1189,0,0
+1779379163966,560,POST Record Academic Data,201,Created,FABRIC 50 Users 1-34,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,560,0,0
+1779379163966,560,POST Record Academic Data,201,Created,FABRIC 50 Users 1-27,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,560,0,0
+1779379163300,1238,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,1238,0,0
+1779379163330,1214,POST Record Academic Data,201,Created,FABRIC 50 Users 1-41,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,1214,0,0
+1779379163966,578,POST Record Academic Data,201,Created,FABRIC 50 Users 1-21,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,578,0,0
+1779379163284,1262,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,1262,0,0
+1779379163330,1225,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,1225,0,0
+1779379164105,838,POST Record Academic Data,201,Created,FABRIC 50 Users 1-46,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,838,0,0
+1779379164290,656,POST Record Academic Data,201,Created,FABRIC 50 Users 1-36,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,656,0,0
+1779379163966,980,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,980,0,0
+1779379163981,985,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,985,0,0
+1779379163966,1001,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,1000,0,0
+1779379163981,986,POST Record Academic Data,201,Created,FABRIC 50 Users 1-45,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,986,0,0
+1779379164290,678,POST Record Academic Data,201,Created,FABRIC 50 Users 1-18,text,true,,707,696,34,34,http://139.59.240.82:3000/api/academic/record,678,0,0
+1779379164074,894,POST Record Academic Data,201,Created,FABRIC 50 Users 1-22,text,true,,706,695,34,34,http://139.59.240.82:3000/api/academic/record,894,0,0
+1779379163981,988,POST Record Academic Data,201,Created,FABRIC 50 Users 1-38,text,true,,706,695,33,33,http://139.59.240.82:3000/api/academic/record,988,0,0
+1779379163966,1003,POST Record Academic Data,201,Created,FABRIC 50 Users 1-19,text,true,,707,696,33,33,http://139.59.240.82:3000/api/academic/record,1003,0,0
+1779379164414,575,POST Record Academic Data,201,Created,FABRIC 50 Users 1-17,text,true,,707,696,32,32,http://139.59.240.82:3000/api/academic/record,575,0,0
+1779379164399,607,POST Record Academic Data,201,Created,FABRIC 50 Users 1-44,text,true,,706,695,31,31,http://139.59.240.82:3000/api/academic/record,607,0,0
+1779379164369,673,POST Record Academic Data,201,Created,FABRIC 50 Users 1-24,text,true,,706,695,31,31,http://139.59.240.82:3000/api/academic/record,673,0,0
+1779379164290,752,POST Record Academic Data,201,Created,FABRIC 50 Users 1-29,text,true,,706,695,31,31,http://139.59.240.82:3000/api/academic/record,752,0,0
+1779379164384,660,POST Record Academic Data,201,Created,FABRIC 50 Users 1-47,text,true,,706,695,31,31,http://139.59.240.82:3000/api/academic/record,660,0,0
+1779379164290,756,POST Record Academic Data,201,Created,FABRIC 50 Users 1-33,text,true,,706,695,31,31,http://139.59.240.82:3000/api/academic/record,756,0,0
+1779379164399,648,POST Record Academic Data,201,Created,FABRIC 50 Users 1-25,text,true,,706,695,31,31,http://139.59.240.82:3000/api/academic/record,648,0,0
+1779379164290,762,POST Record Academic Data,201,Created,FABRIC 50 Users 1-30,text,true,,706,695,31,31,http://139.59.240.82:3000/api/academic/record,762,0,0
+1779379164429,624,POST Record Academic Data,201,Created,FABRIC 50 Users 1-16,text,true,,707,696,31,31,http://139.59.240.82:3000/api/academic/record,624,0,0
+1779379164399,654,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,706,695,31,31,http://139.59.240.82:3000/api/academic/record,654,0,0
+1779379164673,511,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,511,0,0
+1779379164749,436,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,436,0,0
+1779379164414,773,POST Record Academic Data,201,Created,FABRIC 50 Users 1-26,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,773,0,0
+1779379164414,774,POST Record Academic Data,201,Created,FABRIC 50 Users 1-28,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,774,0,0
+1779379164414,774,POST Record Academic Data,201,Created,FABRIC 50 Users 1-43,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,774,0,0
+1779379164749,439,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,439,0,0
+1779379164734,456,POST Record Academic Data,201,Created,FABRIC 50 Users 1-27,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,456,0,0
+1779379164658,533,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,533,0,0
+1779379164400,799,POST Record Academic Data,201,Created,FABRIC 50 Users 1-31,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,799,0,0
+1779379164414,786,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,786,0,0
+1779379164749,1103,POST Record Academic Data,201,Created,FABRIC 50 Users 1-41,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,1103,0,0
+1779379164734,1118,POST Record Academic Data,201,Created,FABRIC 50 Users 1-34,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,1118,0,0
+1779379165151,701,POST Record Academic Data,201,Created,FABRIC 50 Users 1-46,text,true,,706,695,30,30,http://139.59.240.82:3000/api/academic/record,701,0,0
+1779379164749,1155,POST Record Academic Data,201,Created,FABRIC 50 Users 1-21,text,true,,707,696,30,30,http://139.59.240.82:3000/api/academic/record,1155,0,0
+1779379165151,755,POST Record Academic Data,201,Created,FABRIC 50 Users 1-36,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,755,0,0
+1779379165151,755,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,755,0,0
+1779379164765,1141,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,1141,0,0
+1779379165181,728,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,728,0,0
+1779379165181,729,POST Record Academic Data,201,Created,FABRIC 50 Users 1-38,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,729,0,0
+1779379165181,734,POST Record Academic Data,201,Created,FABRIC 50 Users 1-45,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,734,0,0
+1779379165211,720,POST Record Academic Data,201,Created,FABRIC 50 Users 1-44,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,720,0,0
+1779379165257,676,POST Record Academic Data,201,Created,FABRIC 50 Users 1-47,text,true,,706,695,29,29,http://139.59.240.82:3000/api/academic/record,676,0,0
+1779379165181,753,POST Record Academic Data,201,Created,FABRIC 50 Users 1-22,text,true,,707,696,29,29,http://139.59.240.82:3000/api/academic/record,753,0,0
+1779379165257,677,POST Record Academic Data,201,Created,FABRIC 50 Users 1-25,text,true,,707,696,29,29,http://139.59.240.82:3000/api/academic/record,677,0,0
+1779379165257,687,POST Record Academic Data,201,Created,FABRIC 50 Users 1-33,text,true,,706,695,27,27,http://139.59.240.82:3000/api/academic/record,687,0,0
+1779379165181,769,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,706,695,27,27,http://139.59.240.82:3000/api/academic/record,769,0,0
+1779379165244,706,POST Record Academic Data,201,Created,FABRIC 50 Users 1-29,text,true,,707,696,27,27,http://139.59.240.82:3000/api/academic/record,706,0,0
+1779379165243,712,POST Record Academic Data,201,Created,FABRIC 50 Users 1-24,text,true,,707,696,26,26,http://139.59.240.82:3000/api/academic/record,712,0,0
+1779379165257,699,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,706,695,25,25,http://139.59.240.82:3000/api/academic/record,699,0,0
+1779379165257,707,POST Record Academic Data,201,Created,FABRIC 50 Users 1-30,text,true,,707,696,25,25,http://139.59.240.82:3000/api/academic/record,707,0,0
+1779379165397,647,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,706,695,24,24,http://139.59.240.82:3000/api/academic/record,647,0,0
+1779379165397,647,POST Record Academic Data,201,Created,FABRIC 50 Users 1-43,text,true,,706,695,24,24,http://139.59.240.82:3000/api/academic/record,647,0,0
+1779379165397,653,POST Record Academic Data,201,Created,FABRIC 50 Users 1-28,text,true,,707,696,24,24,http://139.59.240.82:3000/api/academic/record,653,0,0
+1779379165397,653,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,706,695,24,24,http://139.59.240.82:3000/api/academic/record,653,0,0
+1779379165412,639,POST Record Academic Data,201,Created,FABRIC 50 Users 1-31,text,true,,706,695,23,23,http://139.59.240.82:3000/api/academic/record,639,0,0
+1779379165397,660,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,706,695,23,23,http://139.59.240.82:3000/api/academic/record,660,0,0
+1779379165397,661,POST Record Academic Data,201,Created,FABRIC 50 Users 1-27,text,true,,707,696,23,23,http://139.59.240.82:3000/api/academic/record,661,0,0
+1779379165397,662,POST Record Academic Data,201,Created,FABRIC 50 Users 1-26,text,true,,707,696,22,22,http://139.59.240.82:3000/api/academic/record,662,0,0
+1779379165397,662,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,706,695,22,22,http://139.59.240.82:3000/api/academic/record,662,0,0
+1779379165412,649,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,706,695,21,21,http://139.59.240.82:3000/api/academic/record,649,0,0
+1779379166118,516,POST Record Academic Data,201,Created,FABRIC 50 Users 1-36,text,true,,706,695,21,21,http://139.59.240.82:3000/api/academic/record,516,0,0
+1779379166118,516,POST Record Academic Data,201,Created,FABRIC 50 Users 1-23,text,true,,707,696,21,21,http://139.59.240.82:3000/api/academic/record,516,0,0
+1779379166134,503,POST Record Academic Data,201,Created,FABRIC 50 Users 1-44,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,503,0,0
+1779379166134,504,POST Record Academic Data,201,Created,FABRIC 50 Users 1-47,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,504,0,0
+1779379166056,583,POST Record Academic Data,201,Created,FABRIC 50 Users 1-46,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,583,0,0
+1779379166118,525,POST Record Academic Data,201,Created,FABRIC 50 Users 1-45,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,525,0,0
+1779379166056,588,POST Record Academic Data,201,Created,FABRIC 50 Users 1-34,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,588,0,0
+1779379166118,527,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,527,0,0
+1779379166056,590,POST Record Academic Data,201,Created,FABRIC 50 Users 1-41,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,590,0,0
+1779379166118,529,POST Record Academic Data,201,Created,FABRIC 50 Users 1-38,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,529,0,0
+1779379166270,446,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,446,0,0
+1779379166254,464,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,464,0,0
+1779379166270,449,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,706,695,20,20,http://139.59.240.82:3000/api/academic/record,449,0,0
+1779379166254,465,POST Record Academic Data,201,Created,FABRIC 50 Users 1-31,text,true,,707,696,20,20,http://139.59.240.82:3000/api/academic/record,465,0,0
+1779379166270,451,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,706,695,19,19,http://139.59.240.82:3000/api/academic/record,451,0,0
+1779379166164,562,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,706,695,19,19,http://139.59.240.82:3000/api/academic/record,562,0,0
+1779379166149,578,POST Record Academic Data,201,Created,FABRIC 50 Users 1-33,text,true,,707,696,19,19,http://139.59.240.82:3000/api/academic/record,578,0,0
+1779379166164,563,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,706,695,19,19,http://139.59.240.82:3000/api/academic/record,563,0,0
+1779379166254,474,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,706,695,18,18,http://139.59.240.82:3000/api/academic/record,474,0,0
+1779379166118,610,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,706,695,18,18,http://139.59.240.82:3000/api/academic/record,610,0,0
+1779379166858,453,POST Record Academic Data,201,Created,FABRIC 50 Users 1-34,text,true,,707,696,18,18,http://139.59.240.82:3000/api/academic/record,453,0,0
+1779379166254,1057,POST Record Academic Data,201,Created,FABRIC 50 Users 1-43,text,true,,706,695,18,18,http://139.59.240.82:3000/api/academic/record,1057,0,0
+1779379166858,459,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,706,695,17,17,http://139.59.240.82:3000/api/academic/record,459,0,0
+1779379166858,459,POST Record Academic Data,201,Created,FABRIC 50 Users 1-38,text,true,,706,695,17,17,http://139.59.240.82:3000/api/academic/record,459,0,0
+1779379166844,473,POST Record Academic Data,201,Created,FABRIC 50 Users 1-46,text,true,,706,695,17,17,http://139.59.240.82:3000/api/academic/record,473,0,0
+1779379166858,461,POST Record Academic Data,201,Created,FABRIC 50 Users 1-41,text,true,,706,695,17,17,http://139.59.240.82:3000/api/academic/record,461,0,0
+1779379166844,475,POST Record Academic Data,201,Created,FABRIC 50 Users 1-45,text,true,,706,695,17,17,http://139.59.240.82:3000/api/academic/record,475,0,0
+1779379166844,475,POST Record Academic Data,201,Created,FABRIC 50 Users 1-36,text,true,,707,696,17,17,http://139.59.240.82:3000/api/academic/record,475,0,0
+1779379166844,476,POST Record Academic Data,201,Created,FABRIC 50 Users 1-44,text,true,,706,695,16,16,http://139.59.240.82:3000/api/academic/record,476,0,0
+1779379166844,477,POST Record Academic Data,201,Created,FABRIC 50 Users 1-47,text,true,,706,695,16,16,http://139.59.240.82:3000/api/academic/record,477,0,0
+1779379166920,930,POST Record Academic Data,201,Created,FABRIC 50 Users 1-35,text,true,,707,696,16,16,http://139.59.240.82:3000/api/academic/record,930,0,0
+1779379166935,916,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,706,695,16,16,http://139.59.240.82:3000/api/academic/record,916,0,0
+1779379166935,918,POST Record Academic Data,201,Created,FABRIC 50 Users 1-32,text,true,,707,696,15,15,http://139.59.240.82:3000/api/academic/record,918,0,0
+1779379166920,933,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,706,695,14,14,http://139.59.240.82:3000/api/academic/record,933,0,0
+1779379166935,919,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,706,695,14,14,http://139.59.240.82:3000/api/academic/record,919,0,0
+1779379166935,919,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,706,695,14,14,http://139.59.240.82:3000/api/academic/record,919,0,0
+1779379166935,920,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,706,695,14,14,http://139.59.240.82:3000/api/academic/record,920,0,0
+1779379166920,935,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,706,695,14,14,http://139.59.240.82:3000/api/academic/record,935,0,0
+1779379167524,332,POST Record Academic Data,201,Created,FABRIC 50 Users 1-47,text,true,,706,695,14,14,http://139.59.240.82:3000/api/academic/record,332,0,0
+1779379167524,333,POST Record Academic Data,201,Created,FABRIC 50 Users 1-45,text,true,,706,695,14,14,http://139.59.240.82:3000/api/academic/record,333,0,0
+1779379167524,824,POST Record Academic Data,201,Created,FABRIC 50 Users 1-46,text,true,,706,695,14,14,http://139.59.240.82:3000/api/academic/record,824,0,0
+1779379167524,825,POST Record Academic Data,201,Created,FABRIC 50 Users 1-43,text,true,,706,695,14,14,http://139.59.240.82:3000/api/academic/record,825,0,0
+1779379167524,825,POST Record Academic Data,201,Created,FABRIC 50 Users 1-39,text,true,,707,696,14,14,http://139.59.240.82:3000/api/academic/record,825,0,0
+1779379168065,286,POST Record Academic Data,201,Created,FABRIC 50 Users 1-40,text,true,,707,696,13,13,http://139.59.240.82:3000/api/academic/record,286,0,0
+1779379168065,286,POST Record Academic Data,201,Created,FABRIC 50 Users 1-37,text,true,,707,696,13,13,http://139.59.240.82:3000/api/academic/record,286,0,0
+1779379167524,829,POST Record Academic Data,201,Created,FABRIC 50 Users 1-38,text,true,,707,696,11,11,http://139.59.240.82:3000/api/academic/record,829,0,0
+1779379168065,289,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,706,695,10,10,http://139.59.240.82:3000/api/academic/record,289,0,0
+1779379167524,831,POST Record Academic Data,201,Created,FABRIC 50 Users 1-44,text,true,,706,695,10,10,http://139.59.240.82:3000/api/academic/record,831,0,0
+1779379168065,291,POST Record Academic Data,201,Created,FABRIC 50 Users 1-42,text,true,,707,696,10,10,http://139.59.240.82:3000/api/academic/record,291,0,0
+1779379167524,833,POST Record Academic Data,201,Created,FABRIC 50 Users 1-41,text,true,,707,696,9,9,http://139.59.240.82:3000/api/academic/record,833,0,0
+1779379168561,1802,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,707,695,8,8,http://139.59.240.82:3000/api/academic/record,1802,0,0
+1779379168065,2303,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,707,695,8,8,http://139.59.240.82:3000/api/academic/record,2303,0,0
+1779379168561,1810,POST Record Academic Data,201,Created,FABRIC 50 Users 1-46,text,true,,708,696,8,8,http://139.59.240.82:3000/api/academic/record,1810,0,0
+1779379168065,2308,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,707,695,7,7,http://139.59.240.82:3000/api/academic/record,2308,0,0
+1779379168561,1813,POST Record Academic Data,201,Created,FABRIC 50 Users 1-43,text,true,,708,696,7,7,http://139.59.240.82:3000/api/academic/record,1813,0,0
+1779379168561,1813,POST Record Academic Data,201,Created,FABRIC 50 Users 1-44,text,true,,708,696,7,7,http://139.59.240.82:3000/api/academic/record,1813,0,0
+1779379168065,2309,POST Record Academic Data,201,Created,FABRIC 50 Users 1-47,text,true,,708,696,7,7,http://139.59.240.82:3000/api/academic/record,2309,0,0
+1779379168065,2312,POST Record Academic Data,201,Created,FABRIC 50 Users 1-45,text,true,,708,696,4,4,http://139.59.240.82:3000/api/academic/record,2312,0,0
+1779379170574,2183,POST Record Academic Data,201,Created,FABRIC 50 Users 1-49,text,true,,708,696,3,3,http://139.59.240.82:3000/api/academic/record,2183,0,0
+1779379170574,2185,POST Record Academic Data,201,Created,FABRIC 50 Users 1-48,text,true,,708,696,2,2,http://139.59.240.82:3000/api/academic/record,2185,0,0
+1779379170574,2185,POST Record Academic Data,201,Created,FABRIC 50 Users 1-50,text,true,,708,696,1,1,http://139.59.240.82:3000/api/academic/record,2185,0,0

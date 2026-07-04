@@ -1,0 +1,90 @@
+{
+	"id": "a6d4da5c-0617-47fa-a940-ec06c5a7d07c",
+	"name": "BACAS - Pengujian Fungsional Sistem v2 (14 Skenario)",
+	"timestamp": "2026-05-17T17:30:53.714Z",
+	"collection_id": "39615442-8a4ba84e-c0dd-4851-9cbb-3aaaf7e0d7cd",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 3,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-05-17T17:30:53.038Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "3c077ce1-42bd-49fd-8504-94c86f59077f",
+			"name": "Skenario 5 - Verifikasi data dimanipulasi → isValid: false [MANUAL]",
+			"url": "http://139.59.240.82:3000/api/verify/hash",
+			"time": 90,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[S5] HTTP 200 - Endpoint verifikasi merespons": true,
+				"[S5] isValid = false (data telah dimanipulasi)": true
+			},
+			"testPassFailCounts": {
+				"[S5] HTTP 200 - Endpoint verifikasi merespons": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S5] isValid = false (data telah dimanipulasi)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				90
+			],
+			"allTests": [
+				{
+					"[S5] HTTP 200 - Endpoint verifikasi merespons": true,
+					"[S5] isValid = false (data telah dimanipulasi)": true
+				}
+			]
+		},
+		{
+			"id": "bedd0ff6-9815-4de2-a1ad-771fc5669817",
+			"name": "CLEANUP - Hapus semua data test",
+			"url": "http://139.59.240.82:3000/api/academic/cleanup-test",
+			"time": 61,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[CLEANUP] Data test akademik dan dokumen berhasil dihapus": true
+			},
+			"testPassFailCounts": {
+				"[CLEANUP] Data test akademik dan dokumen berhasil dihapus": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				61
+			],
+			"allTests": [
+				{
+					"[CLEANUP] Data test akademik dan dokumen berhasil dihapus": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 151,
+	"collection": {
+		"requests": [
+			{
+				"id": "3c077ce1-42bd-49fd-8504-94c86f59077f",
+				"method": "POST"
+			},
+			{
+				"id": "bedd0ff6-9815-4de2-a1ad-771fc5669817",
+				"method": "DELETE"
+			}
+		]
+	}
+}

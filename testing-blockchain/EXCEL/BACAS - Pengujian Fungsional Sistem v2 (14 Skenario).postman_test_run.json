@@ -1,0 +1,692 @@
+{
+	"id": "c0146546-9cf0-4505-880f-fa4cf4035b37",
+	"name": "BACAS - Pengujian Fungsional Sistem v2 (14 Skenario)",
+	"timestamp": "2026-05-17T17:29:12.310Z",
+	"collection_id": "39615442-8a4ba84e-c0dd-4851-9cbb-3aaaf7e0d7cd",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 45,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-05-17T17:29:02.807Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "27cab4e1-f769-4b54-bcde-61d34f941f05",
+			"name": "SETUP - Login Admin (ambil token)",
+			"url": "http://139.59.240.82:3000/api/auth/login",
+			"time": 221,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[SETUP] Login admin berhasil - token tersimpan": true
+			},
+			"testPassFailCounts": {
+				"[SETUP] Login admin berhasil - token tersimpan": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				221
+			],
+			"allTests": [
+				{
+					"[SETUP] Login admin berhasil - token tersimpan": true
+				}
+			]
+		},
+		{
+			"id": "2fb30b49-bb7f-4299-a42a-e8ccd26703d2",
+			"name": "SETUP - Login Mahasiswa (ambil token)",
+			"url": "http://139.59.240.82:3000/api/auth/login",
+			"time": 53,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[SETUP] Login mahasiswa berhasil - token tersimpan": true
+			},
+			"testPassFailCounts": {
+				"[SETUP] Login mahasiswa berhasil - token tersimpan": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				53
+			],
+			"allTests": [
+				{
+					"[SETUP] Login mahasiswa berhasil - token tersimpan": true
+				}
+			]
+		},
+		{
+			"id": "31a0a1db-d238-4443-ae47-1b0b9e602c09",
+			"name": "Skenario 1 - Login kredensial valid → token JWT",
+			"url": "http://139.59.240.82:3000/api/auth/login",
+			"time": 151,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[S1] HTTP 200 - Login berhasil": true,
+				"[S1] Response mengandung token JWT": true,
+				"[S1] Response mengandung data user dengan role yang valid": true
+			},
+			"testPassFailCounts": {
+				"[S1] HTTP 200 - Login berhasil": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S1] Response mengandung token JWT": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S1] Response mengandung data user dengan role yang valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				151
+			],
+			"allTests": [
+				{
+					"[S1] HTTP 200 - Login berhasil": true,
+					"[S1] Response mengandung token JWT": true,
+					"[S1] Response mengandung data user dengan role yang valid": true
+				}
+			]
+		},
+		{
+			"id": "fbc5918c-6da5-48c6-9e63-2977c3e1953b",
+			"name": "Skenario 2 - Login password salah → HTTP 401",
+			"url": "http://139.59.240.82:3000/api/auth/login",
+			"time": 132,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"[S2] HTTP 401 - Login gagal dengan password salah": true,
+				"[S2] Response success = false": true,
+				"[S2] Tidak ada token di response": true
+			},
+			"testPassFailCounts": {
+				"[S2] HTTP 401 - Login gagal dengan password salah": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S2] Response success = false": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S2] Tidak ada token di response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				132
+			],
+			"allTests": [
+				{
+					"[S2] HTTP 401 - Login gagal dengan password salah": true,
+					"[S2] Response success = false": true,
+					"[S2] Tidak ada token di response": true
+				}
+			]
+		},
+		{
+			"id": "c33148fe-bf59-4997-b2da-443f8fd681fd",
+			"name": "Skenario 3 - Input data akademik → hash tercatat di blockchain",
+			"url": "http://139.59.240.82:3000/api/academic/record",
+			"time": 2089,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"[S3] HTTP 201 - Data berhasil dicatat dan blockchain confirmed": true,
+				"[S3] Response mengandung data_hash SHA-256 (64 hex chars)": true,
+				"[S3] Response mengandung tx_id dari blockchain": true,
+				"[S3] Status record = confirmed": true
+			},
+			"testPassFailCounts": {
+				"[S3] HTTP 201 - Data berhasil dicatat dan blockchain confirmed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S3] Response mengandung data_hash SHA-256 (64 hex chars)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S3] Response mengandung tx_id dari blockchain": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S3] Status record = confirmed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2089
+			],
+			"allTests": [
+				{
+					"[S3] HTTP 201 - Data berhasil dicatat dan blockchain confirmed": true,
+					"[S3] Response mengandung data_hash SHA-256 (64 hex chars)": true,
+					"[S3] Response mengandung tx_id dari blockchain": true,
+					"[S3] Status record = confirmed": true
+				}
+			]
+		},
+		{
+			"id": "cafc988e-e120-4a72-b9f6-24cb7d225f04",
+			"name": "Skenario 4 - Verifikasi data valid → isValid: true",
+			"url": "http://139.59.240.82:3000/api/verify/hash",
+			"time": 54,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[S4] HTTP 200 - Verifikasi berhasil": true,
+				"[S4] isValid = true untuk data yang tidak dimanipulasi": true,
+				"[S4] expectedHash dan actualHash tersedia di response": true,
+				"[S4] Kedua hash identik": true
+			},
+			"testPassFailCounts": {
+				"[S4] HTTP 200 - Verifikasi berhasil": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S4] isValid = true untuk data yang tidak dimanipulasi": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S4] expectedHash dan actualHash tersedia di response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S4] Kedua hash identik": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"[S4] HTTP 200 - Verifikasi berhasil": true,
+					"[S4] isValid = true untuk data yang tidak dimanipulasi": true,
+					"[S4] expectedHash dan actualHash tersedia di response": true,
+					"[S4] Kedua hash identik": true
+				}
+			]
+		},
+		{
+			"id": "3278028c-9822-4fae-b787-14b6dbf4e60e",
+			"name": "Skenario 6 - Riwayat transaksi dapat diambil",
+			"url": "http://139.59.240.82:3000/api/academic?limit=10",
+			"time": 70,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[S6] HTTP 200 - Riwayat transaksi berhasil diambil": true,
+				"[S6] Response mengandung array records": true,
+				"[S6] Response mengandung total count": true
+			},
+			"testPassFailCounts": {
+				"[S6] HTTP 200 - Riwayat transaksi berhasil diambil": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S6] Response mengandung array records": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S6] Response mengandung total count": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				70
+			],
+			"allTests": [
+				{
+					"[S6] HTTP 200 - Riwayat transaksi berhasil diambil": true,
+					"[S6] Response mengandung array records": true,
+					"[S6] Response mengandung total count": true
+				}
+			]
+		},
+		{
+			"id": "b9e2866b-56e0-4712-8e79-24ce00006dde",
+			"name": "Skenario 6b - Filter riwayat per Student ID",
+			"url": "http://139.59.240.82:3000/api/academic/FUNC_TEST_1779038944",
+			"time": 39,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[S6b] HTTP 200 - Filter per student_id berhasil": true,
+				"[S6b] Semua record milik student_id yang diminta": true
+			},
+			"testPassFailCounts": {
+				"[S6b] HTTP 200 - Filter per student_id berhasil": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S6b] Semua record milik student_id yang diminta": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"[S6b] HTTP 200 - Filter per student_id berhasil": true,
+					"[S6b] Semua record milik student_id yang diminta": true
+				}
+			]
+		},
+		{
+			"id": "71687392-3f76-4920-8670-617069d29654",
+			"name": "Skenario 7 - Admin buat akun user baru → berhasil",
+			"url": "http://139.59.240.82:3000/api/users",
+			"time": 2474,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"[S7] HTTP 201 - User berhasil dibuat": true,
+				"[S7] Response mengandung data user baru": true,
+				"[S7] Hash user tercatat - data_hash SHA-256 64 chars": true,
+				"[S7] tx_id blockchain tersimpan": true
+			},
+			"testPassFailCounts": {
+				"[S7] HTTP 201 - User berhasil dibuat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S7] Response mengandung data user baru": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S7] Hash user tercatat - data_hash SHA-256 64 chars": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S7] tx_id blockchain tersimpan": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2474
+			],
+			"allTests": [
+				{
+					"[S7] HTTP 201 - User berhasil dibuat": true,
+					"[S7] Response mengandung data user baru": true,
+					"[S7] Hash user tercatat - data_hash SHA-256 64 chars": true,
+					"[S7] tx_id blockchain tersimpan": true
+				}
+			]
+		},
+		{
+			"id": "8991f622-d75b-46f0-96ca-17bdf215d6e5",
+			"name": "Skenario 8 - Mahasiswa akses endpoint Admin → HTTP 403",
+			"url": "http://139.59.240.82:3000/api/users",
+			"time": 37,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"[S8] HTTP 403 - Akses mahasiswa ke endpoint admin ditolak": true,
+				"[S8] Response success = false": true,
+				"[S8] Tidak ada data user di response": true
+			},
+			"testPassFailCounts": {
+				"[S8] HTTP 403 - Akses mahasiswa ke endpoint admin ditolak": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S8] Response success = false": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S8] Tidak ada data user di response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"[S8] HTTP 403 - Akses mahasiswa ke endpoint admin ditolak": true,
+					"[S8] Response success = false": true,
+					"[S8] Tidak ada data user di response": true
+				}
+			]
+		},
+		{
+			"id": "291b5d0c-9cc4-4dc4-b9ce-fc8c48b6cdcb",
+			"name": "Skenario 13 - Nonaktifkan akun user → is_active: false",
+			"url": "http://139.59.240.82:3000/api/users/601e7b48-68d6-4b92-8f31-7b09acab73d0/status",
+			"time": 43,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[S13] HTTP 200 - Status user berhasil diubah": true,
+				"[S13] is_active = false setelah dinonaktifkan": true
+			},
+			"testPassFailCounts": {
+				"[S13] HTTP 200 - Status user berhasil diubah": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S13] is_active = false setelah dinonaktifkan": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"[S13] HTTP 200 - Status user berhasil diubah": true,
+					"[S13] is_active = false setelah dinonaktifkan": true
+				}
+			]
+		},
+		{
+			"id": "87c4dce7-5432-4b7a-9a8b-171cd7c5e6c0",
+			"name": "Skenario 14 - Verifikasi hash user → isValid: true",
+			"url": "http://139.59.240.82:3000/api/users/601e7b48-68d6-4b92-8f31-7b09acab73d0/verify",
+			"time": 53,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[S14] HTTP 200 - Verifikasi hash user berhasil": true,
+				"[S14] isValid = true untuk user yang tidak dimodifikasi": true,
+				"[S14] Response mengandung username yang diverifikasi": true
+			},
+			"testPassFailCounts": {
+				"[S14] HTTP 200 - Verifikasi hash user berhasil": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S14] isValid = true untuk user yang tidak dimodifikasi": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S14] Response mengandung username yang diverifikasi": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				53
+			],
+			"allTests": [
+				{
+					"[S14] HTTP 200 - Verifikasi hash user berhasil": true,
+					"[S14] isValid = true untuk user yang tidak dimodifikasi": true,
+					"[S14] Response mengandung username yang diverifikasi": true
+				}
+			]
+		},
+		{
+			"id": "7dda15b1-110b-44fe-b2e0-ec8fb7eb975e",
+			"name": "Skenario 9 - Generate ijazah → hash tercatat di blockchain",
+			"url": "http://139.59.240.82:3000/api/documents/generate",
+			"time": 2120,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"[S9] HTTP 201 - Ijazah berhasil di-generate": true,
+				"[S9] Response mengandung file_hash SHA-256 (64 chars)": true,
+				"[S9] Response mengandung tx_id blockchain": true
+			},
+			"testPassFailCounts": {
+				"[S9] HTTP 201 - Ijazah berhasil di-generate": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S9] Response mengandung file_hash SHA-256 (64 chars)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S9] Response mengandung tx_id blockchain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2120
+			],
+			"allTests": [
+				{
+					"[S9] HTTP 201 - Ijazah berhasil di-generate": true,
+					"[S9] Response mengandung file_hash SHA-256 (64 chars)": true,
+					"[S9] Response mengandung tx_id blockchain": true
+				}
+			]
+		},
+		{
+			"id": "4a9c8fbd-bc20-4cc3-b032-34daae4ec3fa",
+			"name": "Skenario 10 - Verifikasi dokumen asli by ID → isValid: true",
+			"url": "http://139.59.240.82:3000/api/documents/0657e12f-21fa-4461-b157-fca53b15caed/verify",
+			"time": 47,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[S10] HTTP 200 - Verifikasi dokumen berhasil": true,
+				"[S10] isValid = true untuk dokumen asli": true,
+				"[S10] Hash file DB dan hash blockchain tersedia": true,
+				"[S10] Kedua hash dokumen identik": true
+			},
+			"testPassFailCounts": {
+				"[S10] HTTP 200 - Verifikasi dokumen berhasil": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S10] isValid = true untuk dokumen asli": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S10] Hash file DB dan hash blockchain tersedia": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S10] Kedua hash dokumen identik": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"[S10] HTTP 200 - Verifikasi dokumen berhasil": true,
+					"[S10] isValid = true untuk dokumen asli": true,
+					"[S10] Hash file DB dan hash blockchain tersedia": true,
+					"[S10] Kedua hash dokumen identik": true
+				}
+			]
+		},
+		{
+			"id": "e943b18d-8e68-48cc-a119-d3b7890ebce4",
+			"name": "Skenario 11 - Verifikasi dokumen tidak terdaftar → isValid: false [SEMI-MANUAL]",
+			"url": "http://139.59.240.82:3000/api/documents/00000000-0000-0000-0000-000000000000/verify",
+			"time": 39,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"[S11] HTTP 404 - Dokumen tidak terdaftar ditolak sistem": true,
+				"[S11] Response success = false": true
+			},
+			"testPassFailCounts": {
+				"[S11] HTTP 404 - Dokumen tidak terdaftar ditolak sistem": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S11] Response success = false": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"[S11] HTTP 404 - Dokumen tidak terdaftar ditolak sistem": true,
+					"[S11] Response success = false": true
+				}
+			]
+		},
+		{
+			"id": "e910c856-0dbd-4ed8-93c1-bdd6a4ac58f2",
+			"name": "Skenario 12 - Platform blockchain aktif tampil dari server",
+			"url": "http://139.59.240.82:3000/api/health",
+			"time": 31,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"[S12] HTTP 200 - Health check berhasil": true,
+				"[S12] Response mengandung info platform blockchain aktif": true,
+				"[S12] Status sistem = OK": true
+			},
+			"testPassFailCounts": {
+				"[S12] HTTP 200 - Health check berhasil": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S12] Response mengandung info platform blockchain aktif": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[S12] Status sistem = OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				31
+			],
+			"allTests": [
+				{
+					"[S12] HTTP 200 - Health check berhasil": true,
+					"[S12] Response mengandung info platform blockchain aktif": true,
+					"[S12] Status sistem = OK": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 7653,
+	"collection": {
+		"requests": [
+			{
+				"id": "27cab4e1-f769-4b54-bcde-61d34f941f05",
+				"method": "POST"
+			},
+			{
+				"id": "2fb30b49-bb7f-4299-a42a-e8ccd26703d2",
+				"method": "POST"
+			},
+			{
+				"id": "31a0a1db-d238-4443-ae47-1b0b9e602c09",
+				"method": "POST"
+			},
+			{
+				"id": "fbc5918c-6da5-48c6-9e63-2977c3e1953b",
+				"method": "POST"
+			},
+			{
+				"id": "c33148fe-bf59-4997-b2da-443f8fd681fd",
+				"method": "POST"
+			},
+			{
+				"id": "cafc988e-e120-4a72-b9f6-24cb7d225f04",
+				"method": "POST"
+			},
+			{
+				"id": "3278028c-9822-4fae-b787-14b6dbf4e60e",
+				"method": "GET"
+			},
+			{
+				"id": "b9e2866b-56e0-4712-8e79-24ce00006dde",
+				"method": "GET"
+			},
+			{
+				"id": "71687392-3f76-4920-8670-617069d29654",
+				"method": "POST"
+			},
+			{
+				"id": "8991f622-d75b-46f0-96ca-17bdf215d6e5",
+				"method": "GET"
+			},
+			{
+				"id": "291b5d0c-9cc4-4dc4-b9ce-fc8c48b6cdcb",
+				"method": "PATCH"
+			},
+			{
+				"id": "87c4dce7-5432-4b7a-9a8b-171cd7c5e6c0",
+				"method": "GET"
+			},
+			{
+				"id": "7dda15b1-110b-44fe-b2e0-ec8fb7eb975e",
+				"method": "POST"
+			},
+			{
+				"id": "4a9c8fbd-bc20-4cc3-b032-34daae4ec3fa",
+				"method": "GET"
+			},
+			{
+				"id": "e943b18d-8e68-48cc-a119-d3b7890ebce4",
+				"method": "GET"
+			},
+			{
+				"id": "e910c856-0dbd-4ed8-93c1-bdd6a4ac58f2",
+				"method": "GET"
+			}
+		]
+	}
+}

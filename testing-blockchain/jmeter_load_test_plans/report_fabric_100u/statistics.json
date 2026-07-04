@@ -1,0 +1,50 @@
+{
+  "POST Login" : {
+    "transaction" : "POST Login",
+    "sampleCount" : 1,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 189.0,
+    "medianResTime" : 189.0,
+    "minResTime" : 189.0,
+    "maxResTime" : 189.0,
+    "pct1ResTime" : 189.0,
+    "pct2ResTime" : 189.0,
+    "pct3ResTime" : 189.0,
+    "throughput" : 5.291005291005291,
+    "receivedKBytesPerSec" : 3.63239914021164,
+    "sentKBytesPerSec" : 1.1832423941798942
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 1001,
+    "errorCount" : 54,
+    "errorPct" : 5.394605,
+    "meanResTime" : 766.4575424575434,
+    "medianResTime" : 733.0,
+    "minResTime" : 131.0,
+    "maxResTime" : 2104.0,
+    "pct1ResTime" : 1230.0,
+    "pct2ResTime" : 1307.0,
+    "pct3ResTime" : 1458.0,
+    "throughput" : 48.278190411883855,
+    "receivedKBytesPerSec" : 33.30768604707244,
+    "sentKBytesPerSec" : 32.74216150103694
+  },
+  "POST Record Academic Data" : {
+    "transaction" : "POST Record Academic Data",
+    "sampleCount" : 1000,
+    "errorCount" : 54,
+    "errorPct" : 5.4,
+    "meanResTime" : 767.0350000000003,
+    "medianResTime" : 733.0,
+    "minResTime" : 131.0,
+    "maxResTime" : 2104.0,
+    "pct1ResTime" : 1230.0,
+    "pct2ResTime" : 1307.0,
+    "pct3ResTime" : 1458.0,
+    "throughput" : 50.78462241633233,
+    "receivedKBytesPerSec" : 35.03707475813824,
+    "sentKBytesPerSec" : 34.46510302930273
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@grpc/grpc-js": "^1.14.3",
+    "@hyperledger/fabric-gateway": "^1.10.1",
+    "axios": "^1.15.2",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^17.4.2",
+    "ethers": "^6.16.0",
+    "exceljs": "^4.4.0",
+    "pg": "^8.20.0",
+    "yargs": "^18.0.0"
+  }
+}

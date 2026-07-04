@@ -1,0 +1,31 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1778866327028,9143,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-1,text,true,,723,695,10,10,http://139.59.240.82:3000/api/academic/record,9143,0,37
+1778866331028,5180,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-5,text,true,,723,695,10,10,http://139.59.240.82:3000/api/academic/record,5180,0,35
+1778866328030,8178,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-2,text,true,,723,695,10,10,http://139.59.240.82:3000/api/academic/record,8178,0,29
+1778866330028,6181,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-4,text,true,,723,695,10,10,http://139.59.240.82:3000/api/academic/record,6181,0,29
+1778866332035,4175,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-6,text,true,,723,695,10,10,http://139.59.240.82:3000/api/academic/record,4175,0,29
+1778866333035,27317,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-7,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,27317,0,29
+1778866337180,23172,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-1,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,23172,0,0
+1778866334031,26321,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-8,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,26321,0,28
+1778866335029,25323,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-9,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,25323,0,34
+1778866336040,24315,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-10,text,true,,725,697,10,10,http://139.59.240.82:3000/api/academic/record,24315,0,29
+1778866337210,23174,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-2,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,23174,0,0
+1778866337211,23174,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-6,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,23174,0,0
+1778866337210,23182,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-5,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,23182,0,0
+1778866337210,23182,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-4,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,23182,0,0
+1778866361391,11032,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-2,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,11032,0,0
+1778866361360,11063,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-8,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,11063,0,0
+1778866361360,11063,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-7,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,11063,0,0
+1778866361360,11063,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-1,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,11063,0,0
+1778866361406,11017,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-4,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,11017,0,0
+1778866361391,11032,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-6,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,11032,0,0
+1778866361406,11017,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-5,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,11017,0,0
+1778866361360,11064,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-9,text,true,,724,695,5,5,http://139.59.240.82:3000/api/academic/record,11064,0,0
+1778866361360,11064,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-10,text,true,,725,697,5,5,http://139.59.240.82:3000/api/academic/record,11064,0,0
+1778866329028,60043,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-3,text,false,Response tidak success,2711,0,5,5,http://139.59.240.82:3000/api/academic/record,0,0,41
+1778866373426,47397,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-9,text,true,,724,695,5,5,http://139.59.240.82:3000/api/academic/record,47397,0,0
+1778866373426,47401,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-7,text,true,,724,695,4,4,http://139.59.240.82:3000/api/academic/record,47401,0,0
+1778866373426,47403,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-8,text,true,,724,695,3,3,http://139.59.240.82:3000/api/academic/record,47403,0,0
+1778866390079,30751,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-3,text,true,,724,695,2,2,http://139.59.240.82:3000/api/academic/record,30751,0,33
+1778866373426,47406,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-10,text,true,,725,697,2,2,http://139.59.240.82:3000/api/academic/record,47406,0,0
+1778866421834,11030,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-3,text,true,,724,695,1,1,http://139.59.240.82:3000/api/academic/record,11030,0,0

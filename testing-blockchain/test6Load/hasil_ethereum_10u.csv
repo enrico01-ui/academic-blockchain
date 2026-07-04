@@ -1,0 +1,31 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1779379440099,17332,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-1,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,17332,0,30
+1779379442111,15406,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-3,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,15406,0,32
+1779379443108,14413,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-4,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,14413,0,30
+1779379444103,13422,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-5,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,13422,0,29
+1779379445104,12421,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-6,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,12421,0,28
+1779379446105,11425,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-7,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,11425,0,29
+1779379441109,16424,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-2,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,16424,0,28
+1779379447106,10428,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-8,text,true,,724,695,10,10,http://139.59.240.82:3000/api/academic/record,10428,0,28
+1779379449099,20413,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-10,text,true,,725,697,10,10,http://139.59.240.82:3000/api/academic/record,20413,0,29
+1779379470515,7028,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-10,text,true,,724,697,10,10,http://139.59.240.82:3000/api/academic/record,7028,0,0
+1779379478546,11113,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-10,text,true,,725,697,10,10,http://139.59.240.82:3000/api/academic/record,11113,0,0
+1779379448105,60042,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-9,text,false,Response tidak success,2711,0,9,9,http://139.59.240.82:3000/api/academic/record,0,0,29
+1779379509162,4773,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-9,text,true,,723,695,9,9,http://139.59.240.82:3000/api/academic/record,4773,0,30
+1779379458440,60015,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-1,text,false,Response tidak success,2711,0,9,9,http://139.59.240.82:3000/api/academic/record,0,0,0
+1779379458548,60001,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-2,text,false,Response tidak success,2711,0,9,9,http://139.59.240.82:3000/api/academic/record,0,0,0
+1779379458533,60016,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-7,text,false,Response tidak success,2711,0,9,9,http://139.59.240.82:3000/api/academic/record,0,0,0
+1779379458548,60001,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-8,text,false,Response tidak success,2711,0,9,9,http://139.59.240.82:3000/api/academic/record,0,0,0
+1779379458533,60016,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-5,text,false,Response tidak success,2711,0,9,9,http://139.59.240.82:3000/api/academic/record,0,0,0
+1779379458533,60016,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-6,text,false,Response tidak success,2711,0,9,9,http://139.59.240.82:3000/api/academic/record,0,0,0
+1779379458533,60016,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-4,text,false,Response tidak success,2711,0,9,9,http://139.59.240.82:3000/api/academic/record,0,0,0
+1779379458533,60016,POST Record Academic Data,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,ETHEREUM 10 Users 1-3,text,false,Response tidak success,2711,0,9,9,http://139.59.240.82:3000/api/academic/record,0,0,0
+1779379519552,6765,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-5,text,true,,723,695,9,9,http://139.59.240.82:3000/api/academic/record,6765,0,35
+1779379519552,6765,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-7,text,true,,723,695,9,9,http://139.59.240.82:3000/api/academic/record,6765,0,28
+1779379519468,6853,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-1,text,true,,723,695,7,7,http://139.59.240.82:3000/api/academic/record,6853,0,28
+1779379514942,11379,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-9,text,true,,724,695,6,6,http://139.59.240.82:3000/api/academic/record,11379,0,0
+1779379519560,6810,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-3,text,true,,723,695,5,5,http://139.59.240.82:3000/api/academic/record,6810,0,31
+1779379519560,6815,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-6,text,true,,723,695,4,4,http://139.59.240.82:3000/api/academic/record,6815,0,41
+1779379519552,6825,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-2,text,true,,723,695,3,3,http://139.59.240.82:3000/api/academic/record,6825,0,34
+1779379519560,6819,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-8,text,true,,723,695,2,2,http://139.59.240.82:3000/api/academic/record,6819,0,29
+1779379519560,6819,POST Record Academic Data,201,Created,ETHEREUM 10 Users 1-4,text,true,,723,695,2,2,http://139.59.240.82:3000/api/academic/record,6819,0,41

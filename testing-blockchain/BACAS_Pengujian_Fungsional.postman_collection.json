@@ -1,0 +1,550 @@
+
+{
+  "info": {
+    "name": "BACAS - Pengujian Fungsional Sistem v2 (14 Skenario)",
+    "description": "Postman Collection untuk pengujian fungsional sistem manajemen data akademik berbasis blockchain.\nTugas Akhir - Prodi Informatika UAJY\n\nPerubahan v2:\n- SETUP: tambah assertion agar silent fail terdeteksi\n- S7: username pakai timestamp agar tidak duplicate jika dijalankan berkali-kali\n- CLEANUP: tambah hapus user test\n- S5 & S11: catatan manual diperjelas\n- S4 & S10: nama field disesuaikan dengan response backend\n\nCara pakai:\n1. Import file ini ke Postman\n2. Klik 'Run Collection'\n3. Semua token dan ID diambil otomatis",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "BASE_URL",        "value": "http://139.59.240.82:3000/api", "type": "string" },
+    { "key": "token_admin",     "value": "", "type": "string" },
+    { "key": "token_mahasiswa", "value": "", "type": "string" },
+    { "key": "student_id_test", "value": "FUNC_TEST_001", "type": "string" },
+    { "key": "new_user_id",     "value": "", "type": "string" },
+    { "key": "new_username",    "value": "", "type": "string" },
+    { "key": "doc_id",          "value": "", "type": "string" },
+    { "key": "record_id",       "value": "", "type": "string" }
+  ],
+  "item": [
+
+    {
+      "name": "SETUP - Login Admin (ambil token)",
+      "event": [{ "listen": "test", "script": { "exec": [
+        "pm.test('[SETUP] Login admin berhasil - token tersimpan', function () {",
+        "    pm.response.to.have.status(200);",
+        "    const json = pm.response.json();",
+        "    pm.expect(json.token).to.be.a('string').and.have.length.above(20);",
+        "    pm.collectionVariables.set('token_admin', json.token);",
+        "    console.log('✓ Token admin tersimpan');",
+        "});"
+      ]}}],
+      "request": {
+        "method": "POST", "url": "{{BASE_URL}}/auth/login",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}" }
+      }
+    },
+
+    {
+      "name": "SETUP - Login Mahasiswa (ambil token)",
+      "event": [{ "listen": "test", "script": { "exec": [
+        "pm.test('[SETUP] Login mahasiswa berhasil - token tersimpan', function () {",
+        "    pm.response.to.have.status(200);",
+        "    const json = pm.response.json();",
+        "    pm.expect(json.token).to.be.a('string').and.have.length.above(20);",
+        "    pm.expect(json.user.role).to.equal('mahasiswa');",
+        "    pm.collectionVariables.set('token_mahasiswa', json.token);",
+        "    console.log('✓ Token mahasiswa tersimpan');",
+        "});"
+      ]}}],
+      "request": {
+        "method": "POST", "url": "{{BASE_URL}}/auth/login",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"username\": \"mahasiswa1\",\n  \"password\": \"mahasiswa123\"\n}" }
+      }
+    },
+
+    {
+      "name": "--- FR-01: AUTENTIKASI ---",
+      "item": [
+        {
+          "name": "Skenario 1 - Login kredensial valid → token JWT",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S1] HTTP 200 - Login berhasil', function () {",
+            "    pm.response.to.have.status(200);",
+            "});",
+            "pm.test('[S1] Response mengandung token JWT', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.success).to.be.true;",
+            "    pm.expect(json.token).to.be.a('string').and.have.length.above(20);",
+            "});",
+            "pm.test('[S1] Response mengandung data user dengan role yang valid', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.user).to.have.property('role');",
+            "    pm.expect(['admin','dosen','mahasiswa']).to.include(json.user.role);",
+            "});"
+          ]}}],
+          "request": {
+            "method": "POST", "url": "{{BASE_URL}}/auth/login",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}" }
+          }
+        },
+        {
+          "name": "Skenario 2 - Login password salah → HTTP 401",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S2] HTTP 401 - Login gagal dengan password salah', function () {",
+            "    pm.response.to.have.status(401);",
+            "});",
+            "pm.test('[S2] Response success = false', function () {",
+            "    pm.expect(pm.response.json().success).to.be.false;",
+            "});",
+            "pm.test('[S2] Tidak ada token di response', function () {",
+            "    pm.expect(pm.response.json().token).to.be.undefined;",
+            "});"
+          ]}}],
+          "request": {
+            "method": "POST", "url": "{{BASE_URL}}/auth/login",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"passwordsalah999\"\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "--- FR-02: INPUT DATA AKADEMIK ---",
+      "item": [
+        {
+          "name": "Skenario 3 - Input data akademik → hash tercatat di blockchain",
+          "event": [{
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "// Generate student_id unik sebelum request dikirim",
+              "const ts = Math.floor(Date.now() / 1000);",
+              "const sid = 'FUNC_TEST_' + ts;",
+              "pm.collectionVariables.set('student_id_test', sid);",
+              "console.log('✓ Student ID dibuat:', sid);"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const json = pm.response.json();",
+
+              "pm.test('[S3] HTTP 201 - Data berhasil dicatat dan blockchain confirmed', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+
+              "pm.test('[S3] Response mengandung data_hash SHA-256 (64 hex chars)', function () {",
+              "    pm.expect(json.data.data_hash).to.be.a('string').and.have.lengthOf(64);",
+              "});",
+
+              "pm.test('[S3] Response mengandung tx_id dari blockchain', function () {",
+              "    pm.expect(json.data.tx_id).to.not.be.null;",
+              "    pm.expect(json.data.tx_id).to.be.a('string').and.have.length.above(5);",
+              "});",
+
+              "pm.test('[S3] Status record = confirmed', function () {",
+              "    pm.expect(json.data.status).to.equal('confirmed');",
+              "});",
+
+              "if (json.data && json.data.id) {",
+              "    pm.collectionVariables.set('record_id', json.data.id);",
+              "    console.log('✓ Record ID tersimpan:', json.data.id);",
+              "}"
+            ]
+          }
+        }],
+          "request": {
+            "method": "POST", "url": "{{BASE_URL}}/academic/record",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+            ],
+            "body": { "mode": "raw", "raw": "{\n  \"student_id\": \"{{student_id_test}}\",\n  \"student_name\": \"Mahasiswa Uji Fungsional\",\n  \"course_code\": \"IF-3001\",\n  \"course_name\": \"Pengujian Fungsional\",\n  \"grade\": \"A\",\n  \"gpa_point\": 4.00,\n  \"semester\": 1,\n  \"academic_year\": \"2024/2025\",\n  \"attendance\": \"always\"\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "--- FR-03: VERIFIKASI INTEGRITAS DATA ---",
+      "item": [
+        {
+          "name": "Skenario 4 - Verifikasi data valid → isValid: true",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S4] HTTP 200 - Verifikasi berhasil', function () {",
+            "    pm.response.to.have.status(200);",
+            "});",
+            "pm.test('[S4] isValid = true untuk data yang tidak dimanipulasi', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.verification.isValid).to.be.true;",
+            "});",
+            "pm.test('[S4] expectedHash dan actualHash tersedia di response', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.verification.expectedHash).to.be.a('string').and.have.lengthOf(64);",
+            "    pm.expect(json.verification.actualHash).to.be.a('string').and.have.lengthOf(64);",
+            "});",
+            "pm.test('[S4] Kedua hash identik', function () {",
+            "    const v = pm.response.json().verification;",
+            "    pm.expect(v.expectedHash).to.equal(v.actualHash);",
+            "});",
+            "console.log('VERIFY student_id:', pm.collectionVariables.get('student_id_test'));"
+          ]}}],
+          "request": {
+            "method": "POST", "url": "{{BASE_URL}}/verify/hash",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+            ],
+            "body": { "mode": "raw", "raw": "{\n  \"student_id\": \"{{student_id_test}}\"\n}" }
+          }
+        },
+        {
+          "name": "Skenario 5 - Verifikasi data dimanipulasi → isValid: false [MANUAL]",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "// ============================================================",
+            "// SKENARIO 5 — PETUNJUK PELAKSANAAN MANUAL",
+            "// ============================================================",
+            "// Langkah sebelum menjalankan request ini:",
+            "//",
+            "// 1. Buka terminal / pgAdmin, jalankan SQL berikut:",
+            "//    UPDATE academic_records",
+            "//    SET grade = 'E', gpa_point = 0.00",
+            "//    WHERE student_id = 'FUNC_TEST_001';",
+            "//",
+            "// 2. Jalankan request ini (POST /verify/hash)",
+            "//    → isValid HARUS false karena hash di DB berubah",
+            "//      tapi hash di blockchain tetap (hash grade A)",
+            "//",
+            "// 3. Setelah selesai, kembalikan data asli:",
+            "//    UPDATE academic_records",
+            "//    SET grade = 'A', gpa_point = 4.00",
+            "//    WHERE student_id = 'FUNC_TEST_001';",
+            "// ============================================================",
+            "",
+            "pm.test('[S5] HTTP 200 - Endpoint verifikasi merespons', function () {",
+            "    pm.response.to.have.status(200);",
+            "});",
+            "pm.test('[S5] isValid = false (data telah dimanipulasi)', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.verification.isValid).to.be.false;",
+            "    console.log('Hash DB    :', json.verification.expectedHash?.slice(0,16));",
+            "    console.log('Hash BC    :', json.verification.actualHash?.slice(0,16));",
+            "    console.log('Pesan      :', json.verification.message);",
+            "});"
+          ]}}],
+          "request": {
+            "method": "POST", "url": "{{BASE_URL}}/verify/hash",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+            ],
+            "body": { "mode": "raw", "raw": "{\n  \"student_id\": \"{{student_id_test}}\"\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "--- FR-04: AUDIT TRAIL ---",
+      "item": [
+        {
+          "name": "Skenario 6 - Riwayat transaksi dapat diambil",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S6] HTTP 200 - Riwayat transaksi berhasil diambil', function () {",
+            "    pm.response.to.have.status(200);",
+            "});",
+            "pm.test('[S6] Response mengandung array records', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.success).to.be.true;",
+            "    pm.expect(json.records).to.be.an('array');",
+            "});",
+            "pm.test('[S6] Response mengandung total count', function () {",
+            "    pm.expect(pm.response.json().total).to.be.a('number');",
+            "});"
+          ]}}],
+          "request": {
+            "method": "GET", "url": "{{BASE_URL}}/academic?limit=10",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }]
+          }
+        },
+        {
+          "name": "Skenario 6b - Filter riwayat per Student ID",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S6b] HTTP 200 - Filter per student_id berhasil', function () {",
+            "    pm.response.to.have.status(200);",
+            "});",
+            "pm.test('[S6b] Semua record milik student_id yang diminta', function () {",
+            "    const json = pm.response.json();",
+            "    const sid = pm.collectionVariables.get('student_id_test');",
+            "    pm.expect(json.student_id).to.equal(sid);",
+            "    if (json.records.length > 0) {",
+            "        json.records.forEach(r => pm.expect(r.student_id).to.equal(sid));",
+            "    }",
+            "});"
+          ]}}],
+          "request": {
+            "method": "GET", "url": "{{BASE_URL}}/academic/{{student_id_test}}",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }]
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "--- FR-05: MANAJEMEN USER ---",
+      "item": [
+        {
+          "name": "Skenario 7 - Admin buat akun user baru → berhasil",
+          "event": [
+            { "listen": "prerequest", "script": { "exec": [
+              "// Generate username unik pakai timestamp agar tidak duplicate",
+              "// jika collection dijalankan berkali-kali",
+              "const ts = Date.now();",
+              "const username = 'func_test_' + ts;",
+              "pm.collectionVariables.set('new_username', username);",
+              "pm.collectionVariables.set('new_email', username + '@uajy.ac.id');",
+              "console.log('Username test:', username);"
+            ]}},
+            { "listen": "test", "script": { "exec": [
+              "pm.test('[S7] HTTP 201 - User berhasil dibuat', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "pm.test('[S7] Response mengandung data user baru', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.success).to.be.true;",
+              "    pm.expect(json.data.role).to.equal('mahasiswa');",
+              "});",
+              "pm.test('[S7] Hash user tercatat - data_hash SHA-256 64 chars', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.data.data_hash).to.be.a('string').and.have.lengthOf(64);",
+              "});",
+              "pm.test('[S7] tx_id blockchain tersimpan', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.data.tx_id).to.be.a('string').and.have.length.above(5);",
+              "});",
+              "const json = pm.response.json();",
+              "if (json.data && json.data.id) {",
+              "    pm.collectionVariables.set('new_user_id', json.data.id);",
+              "    console.log('✓ User ID tersimpan:', json.data.id);",
+              "}"
+            ]}}
+          ],
+          "request": {
+            "method": "POST", "url": "{{BASE_URL}}/users",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+            ],
+            "body": { "mode": "raw", "raw": "{\n  \"username\": \"{{new_username}}\",\n  \"email\": \"{{new_email}}\",\n  \"password\": \"test123456\",\n  \"role\": \"mahasiswa\",\n  \"full_name\": \"User Uji Fungsional\"\n}" }
+          }
+        },
+
+        {
+          "name": "Skenario 8 - Mahasiswa akses endpoint Admin → HTTP 403",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S8] HTTP 403 - Akses mahasiswa ke endpoint admin ditolak', function () {",
+            "    pm.response.to.have.status(403);",
+            "});",
+            "pm.test('[S8] Response success = false', function () {",
+            "    pm.expect(pm.response.json().success).to.be.false;",
+            "});",
+            "pm.test('[S8] Tidak ada data user di response', function () {",
+            "    pm.expect(pm.response.json().users).to.be.undefined;",
+            "});"
+          ]}}],
+          "request": {
+            "method": "GET", "url": "{{BASE_URL}}/users",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token_mahasiswa}}" }]
+          }
+        },
+
+        {
+          "name": "Skenario 13 - Nonaktifkan akun user → is_active: false",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S13] HTTP 200 - Status user berhasil diubah', function () {",
+            "    pm.response.to.have.status(200);",
+            "});",
+            "pm.test('[S13] is_active = false setelah dinonaktifkan', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.success).to.be.true;",
+            "    pm.expect(json.user.is_active).to.be.false;",
+            "});"
+          ]}}],
+          "request": {
+            "method": "PATCH", "url": "{{BASE_URL}}/users/{{new_user_id}}/status",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+            ],
+            "body": { "mode": "raw", "raw": "{\n  \"is_active\": false\n}" }
+          }
+        },
+
+        {
+          "name": "Skenario 14 - Verifikasi hash user → isValid: true",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S14] HTTP 200 - Verifikasi hash user berhasil', function () {",
+            "    pm.response.to.have.status(200);",
+            "});",
+            "pm.test('[S14] isValid = true untuk user yang tidak dimodifikasi', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.verification.isValid).to.be.true;",
+            "});",
+            "pm.test('[S14] Response mengandung username yang diverifikasi', function () {",
+            "    const json = pm.response.json();",
+            "    const expectedUsername = pm.collectionVariables.get('new_username');",
+            "    pm.expect(json.username).to.equal(expectedUsername);",
+            "});"
+          ]}}],
+          "request": {
+            "method": "GET", "url": "{{BASE_URL}}/users/{{new_user_id}}/verify",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }]
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "--- FR-06: GENERATE DOKUMEN ---",
+      "item": [
+        {
+          "name": "Skenario 9 - Generate ijazah → hash tercatat di blockchain",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S9] HTTP 201 - Ijazah berhasil di-generate', function () {",
+            "    pm.response.to.have.status(201);",
+            "});",
+            "pm.test('[S9] Response mengandung file_hash SHA-256 (64 chars)', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.document.file_hash).to.be.a('string').and.have.lengthOf(64);",
+            "});",
+            "pm.test('[S9] Response mengandung tx_id blockchain', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.document.tx_id).to.not.be.null;",
+            "    pm.expect(json.document.tx_id).to.be.a('string').and.have.length.above(5);",
+            "});",
+            "const json = pm.response.json();",
+            "if (json.document && json.document.id) {",
+            "    pm.collectionVariables.set('doc_id', json.document.id);",
+            "    console.log('✓ Document ID tersimpan:', json.document.id);",
+            "}"
+          ]}}],
+          "request": {
+            "method": "POST", "url": "{{BASE_URL}}/documents/generate",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+            ],
+            "body": { "mode": "raw", "raw": "{\n  \"student_id\": \"{{student_id_test}}\",\n  \"document_type\": \"ijazah\"\n}" }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "--- FR-07: VERIFIKASI DOKUMEN ---",
+      "item": [
+        {
+          "name": "Skenario 10 - Verifikasi dokumen asli by ID → isValid: true",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S10] HTTP 200 - Verifikasi dokumen berhasil', function () {",
+            "    pm.response.to.have.status(200);",
+            "});",
+            "pm.test('[S10] isValid = true untuk dokumen asli', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.verification.isValid).to.be.true;",
+            "});",
+            "pm.test('[S10] Hash file DB dan hash blockchain tersedia', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.verification.fileHashDb).to.be.a('string').and.have.lengthOf(64);",
+            "    pm.expect(json.verification.hashBlockchain).to.be.a('string').and.have.lengthOf(64);",
+            "});",
+            "pm.test('[S10] Kedua hash dokumen identik', function () {",
+            "    const v = pm.response.json().verification;",
+            "    pm.expect(v.fileHashDb).to.equal(v.hashBlockchain);",
+            "});"
+          ]}}],
+          "request": {
+            "method": "GET", "url": "{{BASE_URL}}/documents/{{doc_id}}/verify",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }]
+          }
+        },
+        {
+          "name": "Skenario 11 - Verifikasi dokumen tidak terdaftar → isValid: false [SEMI-MANUAL]",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "// ============================================================",
+            "// SKENARIO 11 — dua cara pengujian:",
+            "//",
+            "// CARA OTOMATIS (request ini): kirim UUID tidak ada → 404",
+            "// → Membuktikan sistem menolak dokumen yang tidak terdaftar",
+            "//",
+            "// CARA MANUAL (lebih kuat untuk laporan):",
+            "// 1. Download PDF dari skenario 9 via GET /documents/download/:id",
+            "// 2. Buka PDF dengan text editor, ubah satu karakter di akhir file",
+            "// 3. Upload via POST /documents/verify (form-data, field: document)",
+            "// 4. isValid harus false karena hash file berubah",
+            "// ============================================================",
+            "",
+            "pm.test('[S11] HTTP 404 - Dokumen tidak terdaftar ditolak sistem', function () {",
+            "    pm.response.to.have.status(404);",
+            "});",
+            "pm.test('[S11] Response success = false', function () {",
+            "    pm.expect(pm.response.json().success).to.be.false;",
+            "});"
+          ]}}],
+          "request": {
+            "method": "GET", "url": "{{BASE_URL}}/documents/00000000-0000-0000-0000-000000000000/verify",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }]
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "--- FR-08: INFORMASI PLATFORM ---",
+      "item": [
+        {
+          "name": "Skenario 12 - Platform blockchain aktif tampil dari server",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[S12] HTTP 200 - Health check berhasil', function () {",
+            "    pm.response.to.have.status(200);",
+            "});",
+            "pm.test('[S12] Response mengandung info platform blockchain aktif', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.blockchain).to.be.a('string');",
+            "    pm.expect(['ethereum','fabric']).to.include(json.blockchain);",
+            "});",
+            "pm.test('[S12] Status sistem = OK', function () {",
+            "    const json = pm.response.json();",
+            "    pm.expect(json.status).to.equal('OK');",
+            "    pm.expect(json.success).to.be.true;",
+            "});",
+            "console.log('[S12] Platform aktif saat ini:', pm.response.json().blockchain);"
+          ]}}],
+          "request": {
+            "method": "GET", "url": "{{BASE_URL}}/health"
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "CLEANUP - Hapus semua data test",
+      "event": [{ "listen": "test", "script": { "exec": [
+        "pm.test('[CLEANUP] Data test akademik dan dokumen berhasil dihapus', function () {",
+        "    pm.response.to.have.status(200);",
+        "    const json = pm.response.json();",
+        "    pm.expect(json.success).to.be.true;",
+        "    console.log('Dihapus:', json.deleted, 'academic records,', json.deletedDocuments, 'dokumen');",
+        "});",
+        "",
+        "// Catatan: user test (func_test_*) perlu dihapus manual via SQL:",
+        "// DELETE FROM users WHERE username LIKE 'func_test_%';"
+      ]}}],
+      "request": {
+        "method": "DELETE", "url": "{{BASE_URL}}/academic/cleanup-test",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+        ],
+        "body": { "mode": "raw", "raw": "{\n  \"prefix\": \"FUNC_TEST_\"\n}" }
+      }
+    }
+
+  ]
+}
