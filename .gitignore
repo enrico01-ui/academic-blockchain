@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment & Secrets
+.env
+**/.env
+.env.local
+**/.env.local
+
+# Fabric private keys & MSP (JANGAN pernah upload)
+fabric-certs/
+**/*.key
+**/*.pem
+**/*_sk
+
+# Build output
+dist/
+**/dist/
+build/
+**/build/
+frontend/build/
+
+# Ethereum artifacts (opsional, boleh disimpan atau di-skip)
+blockkchain/artifacts/
+blockkchain/cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
