@@ -1,12 +1,6 @@
-// academic_chaincode.go [v2 — tambah access control berbasis MSP]
+// academic_chaincode.go [v3 — fix determinstic timestamp + access control MSP]
 // Chaincode Hyperledger Fabric untuk sistem manajemen data akademik
 // Platform: Hyperledger Fabric v2.5 | Bahasa: Go
-//
-// PERUBAHAN v2:
-//   - Tambah pengecekan MSP di RecordAcademicData dan UpdateAcademicData
-//   - Hanya DosenMSP dan AdminMSP yang boleh invoke fungsi write
-//   - StudentMSP hanya boleh read (GetRecord, GetHash, VerifyIntegrity)
-//   - Ini melengkapi endorsement policy — access control ada DI DALAM chaincode
 
 package main
 
@@ -50,6 +44,18 @@ func getAuthorizedMSPs() []string {
 		keys = append(keys, k)
 	}
 	return keys
+}
+
+// getTxTimestampString mengambil timestamp transaksi dari header transaksi
+// (bukan dari clock lokal peer), sehingga nilainya identik di seluruh peer
+// endorser. Ini mencegah "ProposalResponsePayloads do not match" yang
+// terjadi jika timestamp diambil dari time.Now() pada masing-masing peer.
+func getTxTimestampString(ctx contractapi.TransactionContextInterface) (string, error) {
+	txTimestamp, err := ctx.GetStub().GetTxTimestamp()
+	if err != nil {
+		return "", fmt.Errorf("gagal ambil tx timestamp: %v", err)
+	}
+	return time.Unix(txTimestamp.Seconds, int64(txTimestamp.Nanos)).UTC().Format(time.RFC3339), nil
 }
 
 // ============================================================
@@ -125,12 +131,18 @@ func (c *AcademicContract) RecordAcademicData(
 
 	mspID, _ := ctx.GetClientIdentity().GetMSPID()
 
+	// ── Timestamp deterministik dari header transaksi ────────
+	timestampStr, err := getTxTimestampString(ctx)
+	if err != nil {
+		return err
+	}
+
 	record := AcademicRecord{
 		RecordID:   recordId,
 		StudentID:  studentId,
 		DataHash:   dataHash,
 		RecordedBy: mspID,
-		Timestamp:  time.Now().UTC().Format(time.RFC3339),
+		Timestamp:  timestampStr,
 		IsActive:   true,
 		Version:    1,
 	}
@@ -186,11 +198,17 @@ func (c *AcademicContract) UpdateAcademicData(
 
 	mspID, _ := ctx.GetClientIdentity().GetMSPID()
 
-	record.DataHash   = newHash
+	// ── Timestamp deterministik dari header transaksi ────────
+	timestampStr, err := getTxTimestampString(ctx)
+	if err != nil {
+		return err
+	}
+
+	record.DataHash = newHash
 	record.RecordedBy = mspID
-	record.Timestamp  = time.Now().UTC().Format(time.RFC3339)
-	record.Version    = record.Version + 1
-	record.IsActive   = true
+	record.Timestamp = timestampStr
+	record.Version = record.Version + 1
+	record.IsActive = true
 
 	updatedJSON, err := json.Marshal(record)
 	if err != nil {
@@ -207,7 +225,7 @@ func (c *AcademicContract) UpdateAcademicData(
 }
 
 // ============================================================
-// VerifyIntegrity — READ (semua MSP boleh)
+// VerifyIntegrity — READ (semua MSP boleh, evaluateTransaction)
 // ============================================================
 func (c *AcademicContract) VerifyIntegrity(
 	ctx contractapi.TransactionContextInterface,
@@ -234,6 +252,15 @@ func (c *AcademicContract) VerifyIntegrity(
 		message = "PERINGATAN: Hash tidak cocok! Data kemungkinan telah dimodifikasi"
 	}
 
+	// Fungsi ini dipanggil lewat evaluateTransaction (read-only, tidak
+	// di-endorse lintas peer dan tidak masuk ledger), sehingga secara
+	// teknis time.Now() di sini aman. Tapi tetap dipakai GetTxTimestamp()
+	// agar konsisten dan tidak membingungkan pembaca kode di masa depan.
+	timestampStr, err := getTxTimestampString(ctx)
+	if err != nil {
+		return nil, err
+	}
+
 	fmt.Printf("🔍 VerifyIntegrity: %s | valid: %v\n", recordId, isValid)
 	return &VerifyResult{
 		RecordID:     recordId,
@@ -242,7 +269,7 @@ func (c *AcademicContract) VerifyIntegrity(
 		StoredHash:   record.DataHash,
 		ExpectedHash: expectedHash,
 		Message:      message,
-		Timestamp:    time.Now().UTC().Format(time.RFC3339),
+		Timestamp:    timestampStr,
 	}, nil
 }
 
