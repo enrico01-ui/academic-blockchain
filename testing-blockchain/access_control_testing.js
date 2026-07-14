@@ -26,11 +26,9 @@ try { ({ ethers } = require('ethers'))                        } catch { /* dilew
 try { fabricGateway = require('@hyperledger/fabric-gateway') } catch { /* dilewati */ }
 try { grpc = require('@grpc/grpc-js')                        } catch { /* dilewati */ }
 
-// ─────────────────────────────────────────────
+
 // KONFIGURASI
-// Private key dan key sensitif dibaca dari environment variable (.env)
-// TIDAK ADA private key yang boleh ditulis langsung di sini
-// ─────────────────────────────────────────────
+
 const CONFIG = {
   apiUrl:        process.env.API_URL        || 'http://139.59.240.82:3000/api',
   adminUser:     process.env.ADMIN_USER     || 'admin',
@@ -59,10 +57,7 @@ const CONFIG = {
   },
 }
 
-// ─────────────────────────────────────────────
 // VALIDASI KONFIGURASI ETHEREUM
-// Jalankan ini sebelum test dimulai — gagal cepat daripada error di tengah
-// ─────────────────────────────────────────────
 function validateEthConfig() {
   const issues = []
 
@@ -103,9 +98,9 @@ function loadAbi() {
   }
 }
 
-// ─────────────────────────────────────────────
+
 // HELPER — Layer API (Kelompok 1–5)
-// ─────────────────────────────────────────────
+
 async function getToken(username, password) {
   try {
     const res = await axios.post(`${CONFIG.apiUrl}/auth/login`, { username, password }, { timeout: 10000 })
@@ -135,9 +130,9 @@ async function sendRequest(method, endpoint, token = null, body = null, expiredT
   }
 }
 
-// ─────────────────────────────────────────────
+
 // HELPER — Ethereum Smart Contract (Kelompok 6)
-// ─────────────────────────────────────────────
+
 
 /**
  * Klasifikasi error ethers ke hasil yang bermakna.
@@ -214,7 +209,6 @@ async function testEthUnauthorized(abi, funcName, args, desc) {
     // staticCall: simulasikan eksekusi penuh, tidak kirim transaksi nyata
     await contract[funcName].staticCall(...args)
 
-    // Jika sampai sini → kontrak TIDAK revert → celah keamanan
     return {
       statusCode: 200,
       latencyMs:  Date.now() - t,
@@ -242,7 +236,6 @@ async function testEthUnauthorized(abi, funcName, args, desc) {
 
 /**
  * Verifikasi owner sah bisa memanggil fungsi yang sama (kontrol negatif).
- * Juga pakai staticCall — tidak kirim transaksi nyata.
  */
 async function testEthAuthorized(abi, funcName, args) {
   const t = Date.now()
@@ -297,9 +290,8 @@ function skipResult(reason) {
   return { statusCode: 0, latencyMs: 0, body: reason, blockchainResult: `SKIP — ${reason}`, txHash: '—' }
 }
 
-// ─────────────────────────────────────────────
+
 // HELPER — Hyperledger Fabric Chaincode (Kelompok 7)
-// ─────────────────────────────────────────────
 function newGrpcConnection(tlsCertPath, peerEndpoint, peerHostAlias) {
   const tlsRootCert    = fs.readFileSync(tlsCertPath)
   const tlsCredentials = grpc.credentials.createSsl(tlsRootCert)
@@ -368,9 +360,8 @@ async function testFabricUnauthorized(funcName, args, mspId, certPath, keyPath) 
   }
 }
 
-// ─────────────────────────────────────────────
+
 // SKENARIO PENGUJIAN
-// ─────────────────────────────────────────────
 function buildScenarios(tokenAdmin, tokenDosen, tokenMhs) {
   const scenarios = []
 
@@ -564,9 +555,9 @@ function buildScenarios(tokenAdmin, tokenDosen, tokenMhs) {
   return scenarios
 }
 
-// ─────────────────────────────────────────────
+
 // EXPORT EXCEL
-// ─────────────────────────────────────────────
+
 async function exportExcel(hasil, filename) {
   const wb    = new ExcelJS.Workbook()
   const NAVY  = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF1A2744' } }
@@ -706,9 +697,9 @@ async function exportExcel(hasil, filename) {
   console.log(`\n  ✓ Hasil disimpan ke: ${filename}`)
 }
 
-// ─────────────────────────────────────────────
+
 // MAIN
-// ─────────────────────────────────────────────
+
 async function main() {
   console.log(`\n${'='.repeat(65)}`)
   console.log('  PENGUJIAN KONTROL AKSES — API + BLOCKCHAIN LAYER [v3]')
