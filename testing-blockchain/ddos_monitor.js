@@ -2,12 +2,7 @@
  * ddos_monitor.js — v2
  * =====================
  * Monitor Ketersediaan + Integritas Data saat Simulasi Serangan DDoS
- * Tugas Akhir: Perbandingan Ethereum Testnet dan Hyperledger Fabric
  *
- * Cara pakai:
- *   node ddos_monitor.js --platform ethereum --duration 300
- *   node ddos_monitor.js --platform fabric   --duration 300
- *   node ddos_monitor.js --platform ethereum --duration 300 --flood-workers 50
  *
  * Serangan HTTP Flood dijalankan DARI SCRIPT INI (tidak perlu hping3).
  * Flood menyerang 5 endpoint berbeda secara paralel selama fase serangan.
@@ -32,9 +27,9 @@ const ExcelJS = require('exceljs')
 const yargs   = require('yargs')
 const { hideBin } = require('yargs/helpers')
 
-// ─────────────────────────────────────────────
+
 // KONFIGURASI
-// ─────────────────────────────────────────────
+
 const CONFIG = {
   apiUrl:        process.env.API_URL || 'http://139.59.240.82:3000/api',
   apiUsername:   'admin',
@@ -84,10 +79,9 @@ async function getToken() {
   } catch { return null }
 }
 
-// ─────────────────────────────────────────────
+
 // HTTP FLOOD ENGINE
-// Jalankan request tanpa tunggu — fire & forget
-// ─────────────────────────────────────────────
+
 const FLOOD_ENDPOINTS = [
   // [method, path, body, needsAuth]
   ['GET',  '/health',             null,                               false],
@@ -139,9 +133,9 @@ function stopFlood() {
   floodActive = false
 }
 
-// ─────────────────────────────────────────────
+
 // MONITOR FUNCTIONS
-// ─────────────────────────────────────────────
+
 async function checkHealth(token) {
   const t = Date.now()
   try {
@@ -246,9 +240,9 @@ async function verifyHash(token) {
   }
 }
 
-// ─────────────────────────────────────────────
+
 // CLEANUP
-// ─────────────────────────────────────────────
+
 async function cleanupTestData(token) {
   console.log('\n[CLEANUP] Menghapus data test DDoS...')
   console.log(`  Student IDs: ${registry.academicIds.size} | Dokumen: ${registry.documentIds.length}`)
@@ -282,9 +276,8 @@ async function cleanupTestData(token) {
   return { deletedAcademic, manualSql: deletedAcademic > 0 ? '' : sqlCleanup }
 }
 
-// ─────────────────────────────────────────────
+
 // STATISTIK
-// ─────────────────────────────────────────────
 function calcStats(data) {
   if (!data?.length) return { total:0,success:0,fail:0,availability:0,avgLatency:0,maxLatency:0,minLatency:0,p95:0 }
   const ok  = data.filter(d => d.success)
@@ -351,9 +344,9 @@ async function runBaseline(token, duration) {
   return hasil
 }
 
-// ─────────────────────────────────────────────
+
 // FASE 2: SERANGAN HTTP FLOOD
-// ─────────────────────────────────────────────
+
 async function runAttackPhase(token, duration, floodWorkers) {
   console.log(`\n${'─'.repeat(62)}`)
   console.log(`[FASE 2] SERANGAN HTTP FLOOD — ${duration} detik`)
@@ -438,9 +431,8 @@ async function runAttackPhase(token, duration, floodWorkers) {
   return { hasil, floodStats: { ...floodStats } }
 }
 
-// ─────────────────────────────────────────────
+
 // FASE 3: RECOVERY
-// ─────────────────────────────────────────────
 async function runRecovery(token, duration) {
   console.log(`\n${'─'.repeat(62)}`)
   console.log(`[FASE 3] RECOVERY — ${duration} detik setelah serangan`)
@@ -490,9 +482,8 @@ async function runRecovery(token, duration) {
   return hasil
 }
 
-// ─────────────────────────────────────────────
+
 // EXPORT EXCEL
-// ─────────────────────────────────────────────
 async function exportExcel(platform, baseline, attack, recovery, finalFloodStats, cleanup, filename) {
   const wb   = new ExcelJS.Workbook()
   const NAVY = { type:'pattern', pattern:'solid', fgColor:{argb:'FF1A2744'} }
@@ -679,9 +670,8 @@ async function exportExcel(platform, baseline, attack, recovery, finalFloodStats
   console.log(`  ✓ Laporan disimpan ke: ${filename}`)
 }
 
-// ─────────────────────────────────────────────
+
 // MAIN
-// ─────────────────────────────────────────────
 async function main() {
   const argv = yargs(hideBin(process.argv))
     .option('platform',      { type:'string',  default:'ethereum', description:'ethereum atau fabric' })
