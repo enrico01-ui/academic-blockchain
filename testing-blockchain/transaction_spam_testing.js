@@ -2,12 +2,6 @@
  * transaction_spam_testing.js
  * ============================
  * Pengujian Spam Transaksi Langsung ke Node Blockchain
- * Tugas Akhir: Perbandingan Ethereum Testnet (Sepolia) dan Hyperledger Fabric
- *
- * Cara pakai:
- *   node transaction_spam_testing.js --platform fabric --mode both
- *   node transaction_spam_testing.js --platform ethereum --mode both
- *   node transaction_spam_testing.js --platform ethereum --mode sequential --seq-count 50
  */
 
 const axios   = require('axios')
@@ -15,9 +9,8 @@ const ExcelJS = require('exceljs')
 const yargs   = require('yargs')
 const { hideBin } = require('yargs/helpers')
 
-// ─────────────────────────────────────────────
+
 // KONFIGURASI
-// ─────────────────────────────────────────────
 const CONFIG = {
   apiUrl:      process.env.API_URL      || 'http://139.59.240.82:3000/api',
   apiUsername:  'admin',
@@ -44,9 +37,8 @@ const CONFIG = {
   ethereumTimeout:   60000, // 60 detik — Sepolia bisa ~12 detik mining
 }
 
-// ─────────────────────────────────────────────
+
 // HELPER
-// ─────────────────────────────────────────────
 async function getToken() {
   try {
     const res = await axios.post(`${CONFIG.apiUrl}/auth/login`,
@@ -64,9 +56,8 @@ function randomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)) }
 function nowStr() { return new Date().toLocaleTimeString('id-ID', { hour12: false }) }
 
-// ─────────────────────────────────────────────
+
 // KIRIM SATU TRANSAKSI
-// ─────────────────────────────────────────────
 async function sendTransaction(token, txNo, platform) {
   const GRADES  = ['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C']
   const GPA_MAP = { 'A':4.00,'A-':3.70,'B+':3.30,'B':3.00,'B-':2.70,'C+':2.30,'C':2.00 }
@@ -124,9 +115,8 @@ async function sendTransaction(token, txNo, platform) {
   }
 }
 
-// ─────────────────────────────────────────────
+
 // SEQUENTIAL TEST
-// ─────────────────────────────────────────────
 async function runSequential(token, platform, count) {
   const delay   = platform === 'ethereum' ? CONFIG.ethereumDelay : CONFIG.fabricDelay
   const estTime = platform === 'ethereum'
@@ -171,9 +161,8 @@ async function runSequential(token, platform, count) {
   return { hasil, success, fail, nonceConflict, avgLat, tps, elapsed }
 }
 
-// ─────────────────────────────────────────────
+
 // CONCURRENT TEST
-// ─────────────────────────────────────────────
 async function runConcurrent(token, platform, count) {
   const workers  = platform === 'ethereum' ? CONFIG.ethereumWorkers : CONFIG.fabricWorkers
   const delay    = platform === 'ethereum' ? CONFIG.ethereumDelay   : CONFIG.fabricDelay
@@ -225,9 +214,8 @@ async function runConcurrent(token, platform, count) {
   return { hasil, success, fail, nonceConflict, avgLat, tps, elapsed }
 }
 
-// ─────────────────────────────────────────────
+
 // EXPORT EXCEL
-// ─────────────────────────────────────────────
 async function exportExcel(platform, mode, hasil, success, fail, nonceConflict, avgLat, tps, elapsed, filename) {
   const wb    = new ExcelJS.Workbook()
   const NAVY  = { type:'pattern', pattern:'solid', fgColor:{argb:'FF1A2744'} }
@@ -310,9 +298,8 @@ async function exportExcel(platform, mode, hasil, success, fail, nonceConflict, 
   console.log(`\n  ✓ Hasil disimpan ke: ${filename}`)
 }
 
-// ─────────────────────────────────────────────
+
 // MAIN
-// ─────────────────────────────────────────────
 async function main() {
   const argv = yargs(hideBin(process.argv))
     .option('platform',    { choices:['ethereum','fabric'], demandOption:true })
