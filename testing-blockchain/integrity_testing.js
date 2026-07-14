@@ -2,12 +2,7 @@
  * integrity_testing.js
  * ====================
  * Pengujian Integritas Data Akademik
- * Tugas Akhir: Perbandingan Ethereum Testnet dan Hyperledger Fabric
  *
- * Cara pakai:
- *   node integrity_testing.js --platform ethereum
- *   node integrity_testing.js --platform fabric
- *   node integrity_testing.js --platform both
  *
  * Hasil disimpan ke: hasil_integrity_testing.xlsx
  */
@@ -39,9 +34,8 @@ const CONFIG = {
   sampleSize: 500,
 }
 
-// ─────────────────────────────────────────────
+
 // HELPER
-// ─────────────────────────────────────────────
 function calculateHash(record) {
   const gpa = parseFloat(record.gpa_point).toFixed(2)
   const raw  = `${record.student_id}|${record.course_code}|${record.grade}|${gpa}|${record.semester}|${record.academic_year}|${record.attendance}`
@@ -57,9 +51,8 @@ function prompt(question) {
   return new Promise(resolve => rl.question(question, ans => { rl.close(); resolve(ans) }))
 }
 
-// ─────────────────────────────────────────────
+
 // DATABASE
-// ─────────────────────────────────────────────
 async function countAvailableRecords(platform, token) {
   try {
     // platform 'both' tidak didukung API — query terpisah
@@ -78,7 +71,7 @@ async function countAvailableRecords(platform, token) {
     return 0
   }
 }
-// Fix Bug 2: tambah let
+
 async function fetchSampleRecords(platform, limit = 500, token) {
   try {
     if (platform === 'both') {
@@ -107,8 +100,7 @@ async function fetchSampleRecords(platform, limit = 500, token) {
 }
 
 
-// Fix Bug 3: tamperRecord pakai config yang sama dengan DB yang dipakai API
-// Karena DB ada di VPS, tamperRecord harus konek ke DB VPS
+
 async function tamperRecord(id, grade, gpaPoint) {
   const client = new Client({
     host:     process.env.DB_HOST     || '139.59.240.82', // ← IP VPS bukan localhost
@@ -159,9 +151,8 @@ async function verifyViaApi(studentId, token) {
   }
 }
 
-// ─────────────────────────────────────────────
+
 // INTEGRITY TEST
-// ─────────────────────────────────────────────
 async function runIntegrityTest(platform, records, token) {
   console.log(`\n${'='.repeat(60)}`)
   console.log(`  INTEGRITY TESTING — Platform: ${platform.toUpperCase()}`)
@@ -219,9 +210,9 @@ async function runIntegrityTest(platform, records, token) {
   return { hasil, passCount, failCount, avgLatency }
 }
 
-// ─────────────────────────────────────────────
+
 // TAMPERING TEST
-// ─────────────────────────────────────────────
+
 async function runTamperingTest(records, token) {
   console.log(`\n${'='.repeat(60)}`)
   console.log('  SIMULASI MANIPULASI DATA (Tampering Test)')
@@ -270,9 +261,8 @@ async function runTamperingTest(records, token) {
   return { hasilTamper, detected }
 }
 
-// ─────────────────────────────────────────────
+
 // EXPORT EXCEL
-// ─────────────────────────────────────────────
 async function exportExcel(hasilEth, hasilFab, sumEth, sumFab, tamperHasil, filename) {
   const wb    = new ExcelJS.Workbook()
   const NAVY  = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF1A2744' } }
@@ -365,9 +355,8 @@ async function exportExcel(hasilEth, hasilFab, sumEth, sumFab, tamperHasil, file
   console.log(`\n  ✓ Hasil disimpan ke: ${filename}`)
 }
 
-// ─────────────────────────────────────────────
+
 // MAIN
-// ─────────────────────────────────────────────
 async function main() {
   const argv = yargs(hideBin(process.argv))
     .option('platform', { choices: ['ethereum', 'fabric', 'both'], default: 'both' })
