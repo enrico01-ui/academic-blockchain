@@ -2,19 +2,11 @@
  * access_control_testing.js  [v3 — Ethereum-safe]
  * =========================
  * Pengujian Kontrol Akses Sistem Manajemen Data Akademik
- * Tugas Akhir: Perbandingan Ethereum Testnet dan Hyperledger Fabric
  *
  * Kelompok 1–5 : Uji layer API/middleware
  * Kelompok 6   : Uji akses langsung ke Ethereum Smart Contract (bypass API)
  * Kelompok 7   : Uji akses langsung ke Hyperledger Fabric Chaincode (bypass API)
  *
- * SETUP SEBELUM JALANKAN:
- *   1. Copy file .env.example ke .env dan isi nilainya
- *   2. npm install ethers @hyperledger/fabric-gateway @grpc/grpc-js dotenv
- *   3. Pastikan ABI_PATH menunjuk ke file ABI kontrak yang sudah di-deploy
- *
- * Cara pakai:
- *   node access_control_testing.js
  */
 
 const axios   = require('axios')
