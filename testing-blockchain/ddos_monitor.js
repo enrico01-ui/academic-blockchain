@@ -59,17 +59,16 @@ const registry = {
 let floodActive  = false
 let floodStats   = { total:0, ok:0, fail:0, byEndpoint:{} }
 
-// ─────────────────────────────────────────────
+
 // HELPER
-// ─────────────────────────────────────────────
+
 const sleep  = ms => new Promise(r => setTimeout(r, ms))
 const now    = ()  => new Date().toLocaleTimeString('id-ID', { hour12:false })
 const randInt= (a,b)=> Math.floor(Math.random()*(b-a+1))+a
 const pick   = arr  => arr[Math.floor(Math.random()*arr.length)]
 
-// ─────────────────────────────────────────────
+
 // AUTH
-// ─────────────────────────────────────────────
 async function getToken() {
   try {
     const res = await axios.post(`${CONFIG.apiUrl}/auth/login`,
@@ -295,9 +294,8 @@ function calcStats(data) {
   }
 }
 
-// ─────────────────────────────────────────────
+
 // FASE 1: BASELINE
-// ─────────────────────────────────────────────
 async function runBaseline(token, duration) {
   console.log(`\n${'─'.repeat(62)}`)
   console.log(`[FASE 1] BASELINE — ${duration} detik tanpa serangan`)
